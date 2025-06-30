@@ -3,9 +3,9 @@ const grpc = require('@grpc/grpc-js')
 const message_proto = require('./proto')
 const const_module = require('./const')
 const {v4: uuidv4} = require('uuid');
+const config_module = require('./config.json');
 const emailModule = require('./email');
 const redis_module = require('./redis')
-
 /**
  * GetVarifyCode grpc响应获取验证码的服务
  * @param {*} call 为grpc请求
@@ -43,10 +43,11 @@ async function GetVarifyCode(call, callback)
         let text_str = '您的验证码为' + uniqueId + '请三分钟内完成注册'
         //发送邮件
         let mailOptions = {
-            from: 'secondtonone1@163.com',
+            from: '1739930489@qq.com',
             to: call.request.email,
             subject: '验证码',
             text: text_str,
+            html: `<p>您的验证码是：<b> ${uniqueId} </b>，请三分钟内完成注册。</p>`,
         };
 
         let send_res = await emailModule.SendMail(mailOptions);
