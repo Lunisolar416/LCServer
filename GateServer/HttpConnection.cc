@@ -1,4 +1,5 @@
 #include "HttpConnection.h"
+#include <boost/asio/io_context.hpp>
 #include "LogicSystem.h"
 
 unsigned char ToHex(unsigned char x)
@@ -63,7 +64,7 @@ std::string UrlDecode(const std::string& str)
     return strTemp;
 }
 
-HttpConnection::HttpConnection(tcp::socket socket) : _socket(std::move(socket))
+HttpConnection::HttpConnection(boost::asio::io_context& ioc) : _socket(ioc)
 {
 }
 
@@ -71,8 +72,7 @@ void HttpConnection::Start()
 {
     auto self = shared_from_this();
     http::async_read(_socket, _buffer, _request,
-                     [self](beast::error_code ec, std::size_t bytes_transferred)
-                     {
+                     [self](beast::error_code ec, std::size_t bytes_transferred) {
                          try
                          {
                              if (ec)
@@ -142,27 +142,23 @@ void HttpConnection::WriteResponse()
 {
     auto self = shared_from_this();
     _response.content_length(_response.body().size());
-    http::async_write(_socket, _response,
-                      [self](beast::error_code ec, std::size_t)
-                      {
-                          self->_socket.shutdown(tcp::socket::shutdown_send, ec);
-                          self->deadline_.cancel();
-                      });
+    http::async_write(_socket, _response, [self](beast::error_code ec, std::size_t) {
+        self->_socket.shutdown(tcp::socket::shutdown_send, ec);
+        self->deadline_.cancel();
+    });
 }
 
 void HttpConnection::CheckDeadline()
 {
     auto self = shared_from_this();
 
-    deadline_.async_wait(
-        [self](beast::error_code ec)
+    deadline_.async_wait([self](beast::error_code ec) {
+        if (!ec)
         {
-            if (!ec)
-            {
-                // Close socket to cancel any outstanding operation.
-                self->_socket.close(ec);
-            }
-        });
+            // Close socket to cancel any outstanding operation.
+            self->_socket.close(ec);
+        }
+    });
 }
 
 void HttpConnection::PreParseGetParam()

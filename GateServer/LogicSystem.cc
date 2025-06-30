@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include "HttpConnection.h"
+#include "VarifyGrpcClient.h"
+#include "message.pb.h"
 LogicSystem::LogicSystem()
 {
     RegGet("/get_test", [](std::shared_ptr<HttpConnection> connection) {
@@ -30,8 +32,8 @@ LogicSystem::LogicSystem()
 
             auto email = src_root.value("email", "");  // 安全提取
             std::cout << "email is " << email << std::endl;
-
-            root["error"] = 0;
+            message::GetVarifyResp response = VarifyGrpcClient::getInstance()->GetVarifyCode(email);
+            root["error"] = response.error();
             root["email"] = email;
         }
         catch (const json::parse_error& e)

@@ -1,0 +1,3 @@
+/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles/GateServer.dir
+/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles/edit_cache.dir
+/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles/rebuild_cache.dir
