@@ -1,16 +1,16 @@
 const nodemailer = require('nodemailer');
-const config_module = require('./config')
+const config_module = require('./config.json')
 
 /**
  * 创建发送邮件的代理
  */
 let transport = nodemailer.createTransport({
-    host: 'smtp.163.com',
+    host: 'smtp.qq.com',
     port: 465,
     secure: true,
     auth: {
-        user: config_module.email_user,  // 发送方邮箱地址
-        pass: config_module.email_pass   // 邮箱授权码或者密码
+        user: config_module.email.user,  // 发送方邮箱地址
+        pass: config_module.email.pass   // 邮箱授权码或者密码
     }
 });
 
