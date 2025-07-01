@@ -8,9 +8,11 @@ template <typename T>
 class Singleton
 {
    public:
-    static std::shared_ptr<T> getInstance()
+    template <typename... Args>
+    static std::shared_ptr<T> getInstance(Args&&... args)
     {
-        std::call_once(flag_, []() { instance_ = std::shared_ptr<T>(new T()); });
+        std::call_once(
+            flag_, [&]() { instance_ = std::shared_ptr<T>(new T(std::forward<Args>(args)...)); });
         return instance_;
     }
     void printAddress()
