@@ -17,7 +17,15 @@ class LogicSystem : public Singleton<LogicSystem>
     void RegPost(std::string url, HttpHandler handler);
 
    private:
+    // funcs
+    // get varify code
+    bool handlerGetVarifyCode(std::shared_ptr<HttpConnection> conn);
+    // register user
+    bool handlerRegisterUser(std::shared_ptr<HttpConnection> conn);
+
+   private:
     LogicSystem();
+    void initFuncs();
     std::map<std::string, HttpHandler> _post_handlers;
     std::map<std::string, HttpHandler> _get_handlers;
 };
