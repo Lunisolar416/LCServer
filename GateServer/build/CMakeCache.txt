@@ -234,6 +234,12 @@ GateServer_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 GateServer_SOURCE_DIR:STATIC=/home/lunisolar/cpp/LCServer/GateServer
 
+//MySQL C API header directory
+MYSQL_INCLUDE_DIR:PATH=/usr/include
+
+//MySQL client library
+MYSQL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libmysqlclient.so
+
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
 
@@ -282,6 +288,12 @@ boost_system_DIR:PATH=/usr/local/lib/cmake/boost_system-1.88.0
 //The directory containing a CMake configuration file for gRPC.
 gRPC_DIR:PATH=/usr/local/lib/cmake/grpc
 
+//The directory containing a CMake configuration file for hiredis.
+hiredis_DIR:PATH=/usr/local/lib/cmake/hiredis
+
+//The directory containing a CMake configuration file for openssl.
+openssl_DIR:PATH=openssl_DIR-NOTFOUND
+
 //Path to a library.
 pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
 
@@ -293,6 +305,9 @@ protobuf_MODULE_COMPATIBLE:BOOL=OFF
 
 //Enable for verbose output
 protobuf_VERBOSE:BOOL=OFF
+
+//The directory containing a CMake configuration file for redis++.
+redis++_DIR:PATH=/usr/local/share/cmake/redis++
 
 //The directory containing a CMake configuration file for utf8_range.
 utf8_range_DIR:PATH=/usr/local/lib/cmake/utf8_range

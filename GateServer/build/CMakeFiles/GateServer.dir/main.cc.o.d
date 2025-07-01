@@ -1606,4 +1606,54 @@ CMakeFiles/GateServer.dir/main.cc.o: \
  /usr/local/include/nlohmann/detail/conversions/to_chars.hpp \
  /usr/local/include/nlohmann/ordered_map.hpp \
  /usr/local/include/nlohmann/detail/macro_unscope.hpp \
- /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+ /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.h \
+ /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.h \
+ /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.h \
+ /usr/include/mysql/mysql.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
+ /usr/include/mysql/field_types.h /usr/include/mysql/my_list.h \
+ /usr/include/mysql/mysql_com.h /usr/include/mysql/my_command.h \
+ /usr/include/mysql/my_compress.h \
+ /usr/include/mysql/udf_registration_types.h \
+ /usr/include/mysql/client_plugin.h /usr/include/c++/9/stdlib.h \
+ /usr/include/mysql/plugin_auth_common.h \
+ /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
+ /usr/include/mysql/errmsg.h /usr/include/c++/9/queue \
+ /usr/include/c++/9/deque /usr/include/c++/9/bits/stl_deque.h \
+ /usr/include/c++/9/bits/deque.tcc /usr/include/c++/9/bits/stl_queue.h \
+ /home/lunisolar/cpp/LCServer/GateServer/singleton.h \
+ /home/lunisolar/cpp/LCServer/GateServer/redispool.h \
+ /usr/local/include/sw/redis++/redis++.h \
+ /usr/local/include/sw/redis++/redis.h \
+ /usr/local/include/sw/redis++/connection_pool.h \
+ /usr/local/include/sw/redis++/connection.h \
+ /usr/local/include/hiredis/hiredis.h /usr/local/include/hiredis/read.h \
+ /usr/local/include/hiredis/sds.h /usr/local/include/hiredis/alloc.h \
+ /usr/local/include/sw/redis++/errors.h \
+ /usr/local/include/sw/redis++/reply.h \
+ /usr/local/include/sw/redis++/utils.h \
+ /usr/local/include/sw/redis++/cxx_utils.h \
+ /usr/local/include/sw/redis++/tls.h \
+ /usr/local/include/sw/redis++/hiredis_features.h \
+ /usr/local/include/sw/redis++/sentinel.h /usr/include/c++/9/list \
+ /usr/include/c++/9/bits/stl_list.h /usr/include/c++/9/bits/list.tcc \
+ /usr/local/include/sw/redis++/shards.h \
+ /usr/local/include/sw/redis++/command_options.h \
+ /usr/local/include/sw/redis++/subscriber.h \
+ /usr/local/include/sw/redis++/command.h \
+ /usr/local/include/sw/redis++/command_args.h \
+ /usr/local/include/sw/redis++/pipeline.h \
+ /usr/local/include/sw/redis++/transaction.h \
+ /usr/local/include/sw/redis++/redis_uri.h \
+ /usr/local/include/sw/redis++/redis.hpp \
+ /usr/local/include/sw/redis++/redis_cluster.h \
+ /usr/local/include/sw/redis++/shards_pool.h /usr/include/c++/9/random \
+ /usr/include/c++/9/bits/random.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h \
+ /usr/include/c++/9/bits/random.tcc \
+ /usr/local/include/sw/redis++/redis_cluster.hpp \
+ /usr/local/include/sw/redis++/queued_redis.h \
+ /usr/include/c++/9/unordered_set /usr/include/c++/9/bits/unordered_set.h \
+ /usr/local/include/sw/redis++/queued_redis.hpp \
+ /home/lunisolar/cpp/LCServer/GateServer/snowflake.h

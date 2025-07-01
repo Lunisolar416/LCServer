@@ -249,6 +249,54 @@ LogicSystem.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/LogicSystem.cc.s
 .PHONY : LogicSystem.cc.s
 
+MysqlDao.o: MysqlDao.cc.o
+.PHONY : MysqlDao.o
+
+# target to build an object file
+MysqlDao.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MysqlDao.cc.o
+.PHONY : MysqlDao.cc.o
+
+MysqlDao.i: MysqlDao.cc.i
+.PHONY : MysqlDao.i
+
+# target to preprocess a source file
+MysqlDao.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MysqlDao.cc.i
+.PHONY : MysqlDao.cc.i
+
+MysqlDao.s: MysqlDao.cc.s
+.PHONY : MysqlDao.s
+
+# target to generate assembly for a file
+MysqlDao.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MysqlDao.cc.s
+.PHONY : MysqlDao.cc.s
+
+MysqlMgr.o: MysqlMgr.cc.o
+.PHONY : MysqlMgr.o
+
+# target to build an object file
+MysqlMgr.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MysqlMgr.cc.o
+.PHONY : MysqlMgr.cc.o
+
+MysqlMgr.i: MysqlMgr.cc.i
+.PHONY : MysqlMgr.i
+
+# target to preprocess a source file
+MysqlMgr.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MysqlMgr.cc.i
+.PHONY : MysqlMgr.cc.i
+
+MysqlMgr.s: MysqlMgr.cc.s
+.PHONY : MysqlMgr.s
+
+# target to generate assembly for a file
+MysqlMgr.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MysqlMgr.cc.s
+.PHONY : MysqlMgr.cc.s
+
 VarifyGrpcClient.o: VarifyGrpcClient.cc.o
 .PHONY : VarifyGrpcClient.o
 
@@ -345,6 +393,78 @@ message.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.pb.cc.s
 .PHONY : message.pb.cc.s
 
+redispool.o: redispool.cc.o
+.PHONY : redispool.o
+
+# target to build an object file
+redispool.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redispool.cc.o
+.PHONY : redispool.cc.o
+
+redispool.i: redispool.cc.i
+.PHONY : redispool.i
+
+# target to preprocess a source file
+redispool.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redispool.cc.i
+.PHONY : redispool.cc.i
+
+redispool.s: redispool.cc.s
+.PHONY : redispool.s
+
+# target to generate assembly for a file
+redispool.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redispool.cc.s
+.PHONY : redispool.cc.s
+
+snowflake.o: snowflake.cc.o
+.PHONY : snowflake.o
+
+# target to build an object file
+snowflake.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/snowflake.cc.o
+.PHONY : snowflake.cc.o
+
+snowflake.i: snowflake.cc.i
+.PHONY : snowflake.i
+
+# target to preprocess a source file
+snowflake.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/snowflake.cc.i
+.PHONY : snowflake.cc.i
+
+snowflake.s: snowflake.cc.s
+.PHONY : snowflake.s
+
+# target to generate assembly for a file
+snowflake.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/snowflake.cc.s
+.PHONY : snowflake.cc.s
+
+sqlconnpool.o: sqlconnpool.cc.o
+.PHONY : sqlconnpool.o
+
+# target to build an object file
+sqlconnpool.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/sqlconnpool.cc.o
+.PHONY : sqlconnpool.cc.o
+
+sqlconnpool.i: sqlconnpool.cc.i
+.PHONY : sqlconnpool.i
+
+# target to preprocess a source file
+sqlconnpool.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/sqlconnpool.cc.i
+.PHONY : sqlconnpool.cc.i
+
+sqlconnpool.s: sqlconnpool.cc.s
+.PHONY : sqlconnpool.s
+
+# target to generate assembly for a file
+sqlconnpool.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/sqlconnpool.cc.s
+.PHONY : sqlconnpool.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -369,6 +489,12 @@ help:
 	@echo "... LogicSystem.o"
 	@echo "... LogicSystem.i"
 	@echo "... LogicSystem.s"
+	@echo "... MysqlDao.o"
+	@echo "... MysqlDao.i"
+	@echo "... MysqlDao.s"
+	@echo "... MysqlMgr.o"
+	@echo "... MysqlMgr.i"
+	@echo "... MysqlMgr.s"
 	@echo "... VarifyGrpcClient.o"
 	@echo "... VarifyGrpcClient.i"
 	@echo "... VarifyGrpcClient.s"
@@ -381,6 +507,15 @@ help:
 	@echo "... message.pb.o"
 	@echo "... message.pb.i"
 	@echo "... message.pb.s"
+	@echo "... redispool.o"
+	@echo "... redispool.i"
+	@echo "... redispool.s"
+	@echo "... snowflake.o"
+	@echo "... snowflake.i"
+	@echo "... snowflake.s"
+	@echo "... sqlconnpool.o"
+	@echo "... sqlconnpool.i"
+	@echo "... sqlconnpool.s"
 .PHONY : help
 
 

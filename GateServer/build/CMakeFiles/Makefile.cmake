@@ -10,6 +10,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/lunisolar/cpp/LCServer/GateServer/CMakeLists.txt"
   "CMakeFiles/3.27.9/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.9/CMakeSystem.cmake"
+  "/home/lunisolar/cpp/LCServer/GateServer/config.ini"
   "/opt/cmake-3.27.9/share/cmake-3.27/Modules/CMakeCXXInformation.cmake"
   "/opt/cmake-3.27.9/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake"
   "/opt/cmake-3.27.9/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake"
@@ -65,6 +66,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/lib/cmake/grpc/gRPCPluginTargets.cmake"
   "/usr/local/lib/cmake/grpc/gRPCTargets-release.cmake"
   "/usr/local/lib/cmake/grpc/gRPCTargets.cmake"
+  "/usr/local/lib/cmake/hiredis/hiredis-config-version.cmake"
+  "/usr/local/lib/cmake/hiredis/hiredis-config.cmake"
+  "/usr/local/lib/cmake/hiredis/hiredis-targets-noconfig.cmake"
+  "/usr/local/lib/cmake/hiredis/hiredis-targets.cmake"
   "/usr/local/lib/cmake/protobuf/protobuf-config-version.cmake"
   "/usr/local/lib/cmake/protobuf/protobuf-config.cmake"
   "/usr/local/lib/cmake/protobuf/protobuf-generate.cmake"
@@ -75,6 +80,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/lib/cmake/utf8_range/utf8_range-targets-noconfig.cmake"
   "/usr/local/lib/cmake/utf8_range/utf8_range-targets-release.cmake"
   "/usr/local/lib/cmake/utf8_range/utf8_range-targets.cmake"
+  "/usr/local/share/cmake/redis++/redis++-config-version.cmake"
+  "/usr/local/share/cmake/redis++/redis++-config.cmake"
+  "/usr/local/share/cmake/redis++/redis++-targets-release.cmake"
+  "/usr/local/share/cmake/redis++/redis++-targets.cmake"
   )
 
 # The corresponding makefile is:
@@ -85,6 +94,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "config.ini"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

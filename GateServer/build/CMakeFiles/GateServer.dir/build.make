@@ -195,6 +195,76 @@ CMakeFiles/GateServer.dir/VarifyGrpcClient.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/VarifyGrpcClient.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunisolar/cpp/LCServer/GateServer/VarifyGrpcClient.cc -o CMakeFiles/GateServer.dir/VarifyGrpcClient.cc.s
 
+CMakeFiles/GateServer.dir/redispool.cc.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/redispool.cc.o: /home/lunisolar/cpp/LCServer/GateServer/redispool.cc
+CMakeFiles/GateServer.dir/redispool.cc.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GateServer.dir/redispool.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/redispool.cc.o -MF CMakeFiles/GateServer.dir/redispool.cc.o.d -o CMakeFiles/GateServer.dir/redispool.cc.o -c /home/lunisolar/cpp/LCServer/GateServer/redispool.cc
+
+CMakeFiles/GateServer.dir/redispool.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/redispool.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunisolar/cpp/LCServer/GateServer/redispool.cc > CMakeFiles/GateServer.dir/redispool.cc.i
+
+CMakeFiles/GateServer.dir/redispool.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/redispool.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunisolar/cpp/LCServer/GateServer/redispool.cc -o CMakeFiles/GateServer.dir/redispool.cc.s
+
+CMakeFiles/GateServer.dir/sqlconnpool.cc.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/sqlconnpool.cc.o: /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.cc
+CMakeFiles/GateServer.dir/sqlconnpool.cc.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GateServer.dir/sqlconnpool.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/sqlconnpool.cc.o -MF CMakeFiles/GateServer.dir/sqlconnpool.cc.o.d -o CMakeFiles/GateServer.dir/sqlconnpool.cc.o -c /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.cc
+
+CMakeFiles/GateServer.dir/sqlconnpool.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/sqlconnpool.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.cc > CMakeFiles/GateServer.dir/sqlconnpool.cc.i
+
+CMakeFiles/GateServer.dir/sqlconnpool.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/sqlconnpool.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.cc -o CMakeFiles/GateServer.dir/sqlconnpool.cc.s
+
+CMakeFiles/GateServer.dir/MysqlDao.cc.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/MysqlDao.cc.o: /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.cc
+CMakeFiles/GateServer.dir/MysqlDao.cc.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GateServer.dir/MysqlDao.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/MysqlDao.cc.o -MF CMakeFiles/GateServer.dir/MysqlDao.cc.o.d -o CMakeFiles/GateServer.dir/MysqlDao.cc.o -c /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.cc
+
+CMakeFiles/GateServer.dir/MysqlDao.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/MysqlDao.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.cc > CMakeFiles/GateServer.dir/MysqlDao.cc.i
+
+CMakeFiles/GateServer.dir/MysqlDao.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/MysqlDao.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.cc -o CMakeFiles/GateServer.dir/MysqlDao.cc.s
+
+CMakeFiles/GateServer.dir/MysqlMgr.cc.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/MysqlMgr.cc.o: /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.cc
+CMakeFiles/GateServer.dir/MysqlMgr.cc.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GateServer.dir/MysqlMgr.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/MysqlMgr.cc.o -MF CMakeFiles/GateServer.dir/MysqlMgr.cc.o.d -o CMakeFiles/GateServer.dir/MysqlMgr.cc.o -c /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.cc
+
+CMakeFiles/GateServer.dir/MysqlMgr.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/MysqlMgr.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.cc > CMakeFiles/GateServer.dir/MysqlMgr.cc.i
+
+CMakeFiles/GateServer.dir/MysqlMgr.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/MysqlMgr.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.cc -o CMakeFiles/GateServer.dir/MysqlMgr.cc.s
+
+CMakeFiles/GateServer.dir/snowflake.cc.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/snowflake.cc.o: /home/lunisolar/cpp/LCServer/GateServer/snowflake.cc
+CMakeFiles/GateServer.dir/snowflake.cc.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/GateServer.dir/snowflake.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/snowflake.cc.o -MF CMakeFiles/GateServer.dir/snowflake.cc.o.d -o CMakeFiles/GateServer.dir/snowflake.cc.o -c /home/lunisolar/cpp/LCServer/GateServer/snowflake.cc
+
+CMakeFiles/GateServer.dir/snowflake.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/snowflake.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lunisolar/cpp/LCServer/GateServer/snowflake.cc > CMakeFiles/GateServer.dir/snowflake.cc.i
+
+CMakeFiles/GateServer.dir/snowflake.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/snowflake.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lunisolar/cpp/LCServer/GateServer/snowflake.cc -o CMakeFiles/GateServer.dir/snowflake.cc.s
+
 # Object files for target GateServer
 GateServer_OBJECTS = \
 "CMakeFiles/GateServer.dir/main.cc.o" \
@@ -205,7 +275,12 @@ GateServer_OBJECTS = \
 "CMakeFiles/GateServer.dir/LogicSystem.cc.o" \
 "CMakeFiles/GateServer.dir/message.pb.cc.o" \
 "CMakeFiles/GateServer.dir/message.grpc.pb.cc.o" \
-"CMakeFiles/GateServer.dir/VarifyGrpcClient.cc.o"
+"CMakeFiles/GateServer.dir/VarifyGrpcClient.cc.o" \
+"CMakeFiles/GateServer.dir/redispool.cc.o" \
+"CMakeFiles/GateServer.dir/sqlconnpool.cc.o" \
+"CMakeFiles/GateServer.dir/MysqlDao.cc.o" \
+"CMakeFiles/GateServer.dir/MysqlMgr.cc.o" \
+"CMakeFiles/GateServer.dir/snowflake.cc.o"
 
 # External object files for target GateServer
 GateServer_EXTERNAL_OBJECTS =
@@ -219,16 +294,27 @@ GateServer: CMakeFiles/GateServer.dir/LogicSystem.cc.o
 GateServer: CMakeFiles/GateServer.dir/message.pb.cc.o
 GateServer: CMakeFiles/GateServer.dir/message.grpc.pb.cc.o
 GateServer: CMakeFiles/GateServer.dir/VarifyGrpcClient.cc.o
+GateServer: CMakeFiles/GateServer.dir/redispool.cc.o
+GateServer: CMakeFiles/GateServer.dir/sqlconnpool.cc.o
+GateServer: CMakeFiles/GateServer.dir/MysqlDao.cc.o
+GateServer: CMakeFiles/GateServer.dir/MysqlMgr.cc.o
+GateServer: CMakeFiles/GateServer.dir/snowflake.cc.o
 GateServer: CMakeFiles/GateServer.dir/build.make
 GateServer: /usr/local/lib/libgrpc++.a
 GateServer: /usr/local/lib/libprotobuf.a
 GateServer: /usr/local/lib/libboost_filesystem.so.1.88.0
+GateServer: /usr/local/lib/libredis++.so.1.3.15
+GateServer: /usr/lib/x86_64-linux-gnu/libssl.so
+GateServer: /usr/lib/x86_64-linux-gnu/libcrypto.so
+GateServer: /usr/lib/x86_64-linux-gnu/libmysqlclient.so
 GateServer: /usr/local/lib/libabsl_log_internal_check_op.a
 GateServer: /usr/local/lib/libabsl_leak_check.a
 GateServer: /usr/local/lib/libabsl_die_if_null.a
 GateServer: /usr/local/lib/libabsl_log_initialize.a
 GateServer: /usr/local/lib/libutf8_validity.a
 GateServer: /usr/local/lib/libgrpc.a
+GateServer: /usr/lib/x86_64-linux-gnu/libssl.so
+GateServer: /usr/lib/x86_64-linux-gnu/libcrypto.so
 GateServer: /usr/local/lib/libabsl_statusor.a
 GateServer: /usr/local/lib/libupb_json_lib.a
 GateServer: /usr/local/lib/libupb_textformat_lib.a
@@ -311,13 +397,12 @@ GateServer: /usr/local/lib/libabsl_throw_delegate.a
 GateServer: /usr/local/lib/libabsl_raw_logging_internal.a
 GateServer: /usr/local/lib/libabsl_log_severity.a
 GateServer: /usr/local/lib/libabsl_random_seed_gen_exception.a
-GateServer: /usr/lib/x86_64-linux-gnu/libssl.so
-GateServer: /usr/lib/x86_64-linux-gnu/libcrypto.so
 GateServer: /usr/local/lib/libaddress_sorting.a
 GateServer: /usr/local/lib/libboost_system.so.1.88.0
 GateServer: /usr/local/lib/libboost_atomic.so.1.88.0
+GateServer: /usr/local/lib/libhiredis.so.1.3.0
 GateServer: CMakeFiles/GateServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable GateServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lunisolar/cpp/LCServer/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable GateServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GateServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

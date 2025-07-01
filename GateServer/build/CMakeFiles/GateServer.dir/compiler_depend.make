@@ -1131,8 +1131,13 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /home/lunisolar/cpp/LCServer/GateServer/AsioIOServicePool.h \
   /home/lunisolar/cpp/LCServer/GateServer/CServer.h \
   /home/lunisolar/cpp/LCServer/GateServer/HttpConnection.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.h \
   /home/lunisolar/cpp/LCServer/GateServer/const.h \
+  /home/lunisolar/cpp/LCServer/GateServer/redispool.h \
   /home/lunisolar/cpp/LCServer/GateServer/singleton.h \
+  /home/lunisolar/cpp/LCServer/GateServer/snowflake.h \
+  /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -1169,6 +1174,7 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/c++/9/bits/cpp_type_traits.h \
   /usr/include/c++/9/bits/cxxabi_forced.h \
   /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/bits/deque.tcc \
   /usr/include/c++/9/bits/enable_special_members.h \
   /usr/include/c++/9/bits/erase_if.h \
   /usr/include/c++/9/bits/exception.h \
@@ -1191,6 +1197,7 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/c++/9/bits/invoke.h \
   /usr/include/c++/9/bits/ios_base.h \
   /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/list.tcc \
   /usr/include/c++/9/bits/locale_classes.h \
   /usr/include/c++/9/bits/locale_classes.tcc \
   /usr/include/c++/9/bits/locale_conv.h \
@@ -1211,6 +1218,8 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/c++/9/bits/predefined_ops.h \
   /usr/include/c++/9/bits/ptr_traits.h \
   /usr/include/c++/9/bits/quoted_string.h \
+  /usr/include/c++/9/bits/random.h \
+  /usr/include/c++/9/bits/random.tcc \
   /usr/include/c++/9/bits/range_access.h \
   /usr/include/c++/9/bits/refwrap.h \
   /usr/include/c++/9/bits/shared_ptr.h \
@@ -1226,15 +1235,18 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/c++/9/bits/stl_algobase.h \
   /usr/include/c++/9/bits/stl_bvector.h \
   /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_deque.h \
   /usr/include/c++/9/bits/stl_function.h \
   /usr/include/c++/9/bits/stl_heap.h \
   /usr/include/c++/9/bits/stl_iterator.h \
   /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_list.h \
   /usr/include/c++/9/bits/stl_map.h \
   /usr/include/c++/9/bits/stl_multimap.h \
   /usr/include/c++/9/bits/stl_numeric.h \
   /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_queue.h \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/bits/stl_relops.h \
   /usr/include/c++/9/bits/stl_tempbuf.h \
@@ -1250,6 +1262,7 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/c++/9/bits/unique_lock.h \
   /usr/include/c++/9/bits/unique_ptr.h \
   /usr/include/c++/9/bits/unordered_map.h \
+  /usr/include/c++/9/bits/unordered_set.h \
   /usr/include/c++/9/bits/uses_allocator.h \
   /usr/include/c++/9/bits/valarray_after.h \
   /usr/include/c++/9/bits/valarray_array.h \
@@ -1277,6 +1290,7 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/c++/9/cwctype \
   /usr/include/c++/9/debug/assertions.h \
   /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/deque \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/ext/aligned_buffer.h \
   /usr/include/c++/9/ext/alloc_traits.h \
@@ -1298,6 +1312,7 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/c++/9/istream \
   /usr/include/c++/9/iterator \
   /usr/include/c++/9/limits \
+  /usr/include/c++/9/list \
   /usr/include/c++/9/locale \
   /usr/include/c++/9/map \
   /usr/include/c++/9/memory \
@@ -1311,9 +1326,12 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/c++/9/pstl/glue_memory_defs.h \
   /usr/include/c++/9/pstl/glue_numeric_defs.h \
   /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/queue \
+  /usr/include/c++/9/random \
   /usr/include/c++/9/ratio \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/stdlib.h \
   /usr/include/c++/9/streambuf \
   /usr/include/c++/9/string \
   /usr/include/c++/9/string_view \
@@ -1336,6 +1354,7 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/c++/9/typeindex \
   /usr/include/c++/9/typeinfo \
   /usr/include/c++/9/unordered_map \
+  /usr/include/c++/9/unordered_set \
   /usr/include/c++/9/utility \
   /usr/include/c++/9/valarray \
   /usr/include/c++/9/variant \
@@ -1359,6 +1378,18 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/linux/version.h \
   /usr/include/locale.h \
   /usr/include/math.h \
+  /usr/include/mysql/client_plugin.h \
+  /usr/include/mysql/errmsg.h \
+  /usr/include/mysql/field_types.h \
+  /usr/include/mysql/my_command.h \
+  /usr/include/mysql/my_compress.h \
+  /usr/include/mysql/my_list.h \
+  /usr/include/mysql/mysql.h \
+  /usr/include/mysql/mysql_com.h \
+  /usr/include/mysql/mysql_time.h \
+  /usr/include/mysql/mysql_version.h \
+  /usr/include/mysql/plugin_auth_common.h \
+  /usr/include/mysql/udf_registration_types.h \
   /usr/include/net/if.h \
   /usr/include/netdb.h \
   /usr/include/netinet/in.h \
@@ -1527,6 +1558,7 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -1548,6 +1580,7 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/include/x86_64-linux-gnu/sys/un.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -2773,6 +2806,10 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/local/include/boost/utility/string_view.hpp \
   /usr/local/include/boost/utility/string_view_fwd.hpp \
   /usr/local/include/boost/version.hpp \
+  /usr/local/include/hiredis/alloc.h \
+  /usr/local/include/hiredis/hiredis.h \
+  /usr/local/include/hiredis/read.h \
+  /usr/local/include/hiredis/sds.h \
   /usr/local/include/nlohmann/adl_serializer.hpp \
   /usr/local/include/nlohmann/byte_container_with_subtype.hpp \
   /usr/local/include/nlohmann/detail/abi_macros.hpp \
@@ -2818,7 +2855,32 @@ CMakeFiles/GateServer.dir/CServer.cc.o: /home/lunisolar/cpp/LCServer/GateServer/
   /usr/local/include/nlohmann/json_fwd.hpp \
   /usr/local/include/nlohmann/ordered_map.hpp \
   /usr/local/include/nlohmann/thirdparty/hedley/hedley.hpp \
-  /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+  /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/local/include/sw/redis++/command.h \
+  /usr/local/include/sw/redis++/command_args.h \
+  /usr/local/include/sw/redis++/command_options.h \
+  /usr/local/include/sw/redis++/connection.h \
+  /usr/local/include/sw/redis++/connection_pool.h \
+  /usr/local/include/sw/redis++/cxx_utils.h \
+  /usr/local/include/sw/redis++/errors.h \
+  /usr/local/include/sw/redis++/hiredis_features.h \
+  /usr/local/include/sw/redis++/pipeline.h \
+  /usr/local/include/sw/redis++/queued_redis.h \
+  /usr/local/include/sw/redis++/queued_redis.hpp \
+  /usr/local/include/sw/redis++/redis++.h \
+  /usr/local/include/sw/redis++/redis.h \
+  /usr/local/include/sw/redis++/redis.hpp \
+  /usr/local/include/sw/redis++/redis_cluster.h \
+  /usr/local/include/sw/redis++/redis_cluster.hpp \
+  /usr/local/include/sw/redis++/redis_uri.h \
+  /usr/local/include/sw/redis++/reply.h \
+  /usr/local/include/sw/redis++/sentinel.h \
+  /usr/local/include/sw/redis++/shards.h \
+  /usr/local/include/sw/redis++/shards_pool.h \
+  /usr/local/include/sw/redis++/subscriber.h \
+  /usr/local/include/sw/redis++/tls.h \
+  /usr/local/include/sw/redis++/transaction.h \
+  /usr/local/include/sw/redis++/utils.h
 
 CMakeFiles/GateServer.dir/ConfigMgr.cc.o: /home/lunisolar/cpp/LCServer/GateServer/ConfigMgr.cc \
   /home/lunisolar/cpp/LCServer/GateServer/ConfigMgr.h \
@@ -3738,8 +3800,13 @@ CMakeFiles/GateServer.dir/ConfigMgr.cc.o: /home/lunisolar/cpp/LCServer/GateServe
 CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/GateServer/HttpConnection.cc \
   /home/lunisolar/cpp/LCServer/GateServer/HttpConnection.h \
   /home/lunisolar/cpp/LCServer/GateServer/LogicSystem.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.h \
   /home/lunisolar/cpp/LCServer/GateServer/const.h \
+  /home/lunisolar/cpp/LCServer/GateServer/redispool.h \
   /home/lunisolar/cpp/LCServer/GateServer/singleton.h \
+  /home/lunisolar/cpp/LCServer/GateServer/snowflake.h \
+  /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -3776,6 +3843,7 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/c++/9/bits/cpp_type_traits.h \
   /usr/include/c++/9/bits/cxxabi_forced.h \
   /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/bits/deque.tcc \
   /usr/include/c++/9/bits/enable_special_members.h \
   /usr/include/c++/9/bits/erase_if.h \
   /usr/include/c++/9/bits/exception.h \
@@ -3798,6 +3866,7 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/c++/9/bits/invoke.h \
   /usr/include/c++/9/bits/ios_base.h \
   /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/list.tcc \
   /usr/include/c++/9/bits/locale_classes.h \
   /usr/include/c++/9/bits/locale_classes.tcc \
   /usr/include/c++/9/bits/locale_conv.h \
@@ -3818,6 +3887,8 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/c++/9/bits/predefined_ops.h \
   /usr/include/c++/9/bits/ptr_traits.h \
   /usr/include/c++/9/bits/quoted_string.h \
+  /usr/include/c++/9/bits/random.h \
+  /usr/include/c++/9/bits/random.tcc \
   /usr/include/c++/9/bits/range_access.h \
   /usr/include/c++/9/bits/refwrap.h \
   /usr/include/c++/9/bits/shared_ptr.h \
@@ -3833,15 +3904,18 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/c++/9/bits/stl_algobase.h \
   /usr/include/c++/9/bits/stl_bvector.h \
   /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_deque.h \
   /usr/include/c++/9/bits/stl_function.h \
   /usr/include/c++/9/bits/stl_heap.h \
   /usr/include/c++/9/bits/stl_iterator.h \
   /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_list.h \
   /usr/include/c++/9/bits/stl_map.h \
   /usr/include/c++/9/bits/stl_multimap.h \
   /usr/include/c++/9/bits/stl_numeric.h \
   /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_queue.h \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/bits/stl_relops.h \
   /usr/include/c++/9/bits/stl_tempbuf.h \
@@ -3857,6 +3931,7 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/c++/9/bits/unique_lock.h \
   /usr/include/c++/9/bits/unique_ptr.h \
   /usr/include/c++/9/bits/unordered_map.h \
+  /usr/include/c++/9/bits/unordered_set.h \
   /usr/include/c++/9/bits/uses_allocator.h \
   /usr/include/c++/9/bits/valarray_after.h \
   /usr/include/c++/9/bits/valarray_array.h \
@@ -3884,6 +3959,7 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/c++/9/cwctype \
   /usr/include/c++/9/debug/assertions.h \
   /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/deque \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/ext/aligned_buffer.h \
   /usr/include/c++/9/ext/alloc_traits.h \
@@ -3905,6 +3981,7 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/c++/9/istream \
   /usr/include/c++/9/iterator \
   /usr/include/c++/9/limits \
+  /usr/include/c++/9/list \
   /usr/include/c++/9/locale \
   /usr/include/c++/9/map \
   /usr/include/c++/9/memory \
@@ -3918,9 +3995,12 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/c++/9/pstl/glue_memory_defs.h \
   /usr/include/c++/9/pstl/glue_numeric_defs.h \
   /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/queue \
+  /usr/include/c++/9/random \
   /usr/include/c++/9/ratio \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/stdlib.h \
   /usr/include/c++/9/streambuf \
   /usr/include/c++/9/string \
   /usr/include/c++/9/string_view \
@@ -3943,6 +4023,7 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/c++/9/typeindex \
   /usr/include/c++/9/typeinfo \
   /usr/include/c++/9/unordered_map \
+  /usr/include/c++/9/unordered_set \
   /usr/include/c++/9/utility \
   /usr/include/c++/9/valarray \
   /usr/include/c++/9/variant \
@@ -3966,6 +4047,18 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/linux/version.h \
   /usr/include/locale.h \
   /usr/include/math.h \
+  /usr/include/mysql/client_plugin.h \
+  /usr/include/mysql/errmsg.h \
+  /usr/include/mysql/field_types.h \
+  /usr/include/mysql/my_command.h \
+  /usr/include/mysql/my_compress.h \
+  /usr/include/mysql/my_list.h \
+  /usr/include/mysql/mysql.h \
+  /usr/include/mysql/mysql_com.h \
+  /usr/include/mysql/mysql_time.h \
+  /usr/include/mysql/mysql_version.h \
+  /usr/include/mysql/plugin_auth_common.h \
+  /usr/include/mysql/udf_registration_types.h \
   /usr/include/net/if.h \
   /usr/include/netdb.h \
   /usr/include/netinet/in.h \
@@ -4134,6 +4227,7 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -4155,6 +4249,7 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/include/x86_64-linux-gnu/sys/un.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -5380,6 +5475,10 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/local/include/boost/utility/string_view.hpp \
   /usr/local/include/boost/utility/string_view_fwd.hpp \
   /usr/local/include/boost/version.hpp \
+  /usr/local/include/hiredis/alloc.h \
+  /usr/local/include/hiredis/hiredis.h \
+  /usr/local/include/hiredis/read.h \
+  /usr/local/include/hiredis/sds.h \
   /usr/local/include/nlohmann/adl_serializer.hpp \
   /usr/local/include/nlohmann/byte_container_with_subtype.hpp \
   /usr/local/include/nlohmann/detail/abi_macros.hpp \
@@ -5425,16 +5524,47 @@ CMakeFiles/GateServer.dir/HttpConnection.cc.o: /home/lunisolar/cpp/LCServer/Gate
   /usr/local/include/nlohmann/json_fwd.hpp \
   /usr/local/include/nlohmann/ordered_map.hpp \
   /usr/local/include/nlohmann/thirdparty/hedley/hedley.hpp \
-  /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+  /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/local/include/sw/redis++/command.h \
+  /usr/local/include/sw/redis++/command_args.h \
+  /usr/local/include/sw/redis++/command_options.h \
+  /usr/local/include/sw/redis++/connection.h \
+  /usr/local/include/sw/redis++/connection_pool.h \
+  /usr/local/include/sw/redis++/cxx_utils.h \
+  /usr/local/include/sw/redis++/errors.h \
+  /usr/local/include/sw/redis++/hiredis_features.h \
+  /usr/local/include/sw/redis++/pipeline.h \
+  /usr/local/include/sw/redis++/queued_redis.h \
+  /usr/local/include/sw/redis++/queued_redis.hpp \
+  /usr/local/include/sw/redis++/redis++.h \
+  /usr/local/include/sw/redis++/redis.h \
+  /usr/local/include/sw/redis++/redis.hpp \
+  /usr/local/include/sw/redis++/redis_cluster.h \
+  /usr/local/include/sw/redis++/redis_cluster.hpp \
+  /usr/local/include/sw/redis++/redis_uri.h \
+  /usr/local/include/sw/redis++/reply.h \
+  /usr/local/include/sw/redis++/sentinel.h \
+  /usr/local/include/sw/redis++/shards.h \
+  /usr/local/include/sw/redis++/shards_pool.h \
+  /usr/local/include/sw/redis++/subscriber.h \
+  /usr/local/include/sw/redis++/tls.h \
+  /usr/local/include/sw/redis++/transaction.h \
+  /usr/local/include/sw/redis++/utils.h
 
 CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateServer/LogicSystem.cc \
+  /home/lunisolar/cpp/LCServer/GateServer/ConfigMgr.h \
   /home/lunisolar/cpp/LCServer/GateServer/HttpConnection.h \
   /home/lunisolar/cpp/LCServer/GateServer/LogicSystem.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.h \
   /home/lunisolar/cpp/LCServer/GateServer/VarifyGrpcClient.h \
   /home/lunisolar/cpp/LCServer/GateServer/const.h \
   /home/lunisolar/cpp/LCServer/GateServer/message.grpc.pb.h \
   /home/lunisolar/cpp/LCServer/GateServer/message.pb.h \
+  /home/lunisolar/cpp/LCServer/GateServer/redispool.h \
   /home/lunisolar/cpp/LCServer/GateServer/singleton.h \
+  /home/lunisolar/cpp/LCServer/GateServer/snowflake.h \
+  /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -5484,6 +5614,7 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/include/c++/9/bits/fs_fwd.h \
   /usr/include/c++/9/bits/fs_ops.h \
   /usr/include/c++/9/bits/fs_path.h \
+  /usr/include/c++/9/bits/fstream.tcc \
   /usr/include/c++/9/bits/functexcept.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/gslice.h \
@@ -5516,6 +5647,8 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/include/c++/9/bits/predefined_ops.h \
   /usr/include/c++/9/bits/ptr_traits.h \
   /usr/include/c++/9/bits/quoted_string.h \
+  /usr/include/c++/9/bits/random.h \
+  /usr/include/c++/9/bits/random.tcc \
   /usr/include/c++/9/bits/range_access.h \
   /usr/include/c++/9/bits/refwrap.h \
   /usr/include/c++/9/bits/shared_ptr.h \
@@ -5543,6 +5676,7 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/include/c++/9/bits/stl_multiset.h \
   /usr/include/c++/9/bits/stl_numeric.h \
   /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_queue.h \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/bits/stl_relops.h \
   /usr/include/c++/9/bits/stl_set.h \
@@ -5586,6 +5720,7 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/include/c++/9/ctime \
   /usr/include/c++/9/cwchar \
   /usr/include/c++/9/cwctype \
+  /usr/include/c++/9/cxxabi.h \
   /usr/include/c++/9/debug/assertions.h \
   /usr/include/c++/9/debug/debug.h \
   /usr/include/c++/9/deque \
@@ -5600,6 +5735,7 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/include/c++/9/ext/type_traits.h \
   /usr/include/c++/9/filesystem \
   /usr/include/c++/9/forward_list \
+  /usr/include/c++/9/fstream \
   /usr/include/c++/9/functional \
   /usr/include/c++/9/future \
   /usr/include/c++/9/initializer_list \
@@ -5624,6 +5760,8 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/include/c++/9/pstl/glue_memory_defs.h \
   /usr/include/c++/9/pstl/glue_numeric_defs.h \
   /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/queue \
+  /usr/include/c++/9/random \
   /usr/include/c++/9/ratio \
   /usr/include/c++/9/set \
   /usr/include/c++/9/sstream \
@@ -5675,6 +5813,18 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/include/linux/version.h \
   /usr/include/locale.h \
   /usr/include/math.h \
+  /usr/include/mysql/client_plugin.h \
+  /usr/include/mysql/errmsg.h \
+  /usr/include/mysql/field_types.h \
+  /usr/include/mysql/my_command.h \
+  /usr/include/mysql/my_compress.h \
+  /usr/include/mysql/my_list.h \
+  /usr/include/mysql/mysql.h \
+  /usr/include/mysql/mysql_com.h \
+  /usr/include/mysql/mysql_time.h \
+  /usr/include/mysql/mysql_version.h \
+  /usr/include/mysql/plugin_auth_common.h \
+  /usr/include/mysql/udf_registration_types.h \
   /usr/include/net/if.h \
   /usr/include/netdb.h \
   /usr/include/netinet/in.h \
@@ -5833,16 +5983,20 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cxxabi_tweaks.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -6019,6 +6173,10 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/absl/types/variant.h \
   /usr/local/include/absl/utility/internal/if_constexpr.h \
   /usr/local/include/absl/utility/utility.h \
+  /usr/local/include/boost/any.hpp \
+  /usr/local/include/boost/any/bad_any_cast.hpp \
+  /usr/local/include/boost/any/detail/placeholder.hpp \
+  /usr/local/include/boost/any/fwd.hpp \
   /usr/local/include/boost/asio.hpp \
   /usr/local/include/boost/asio/any_completion_executor.hpp \
   /usr/local/include/boost/asio/any_completion_handler.hpp \
@@ -6607,9 +6765,22 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/beast/http/write.hpp \
   /usr/local/include/boost/beast/websocket/impl/teardown.hpp \
   /usr/local/include/boost/beast/websocket/teardown.hpp \
+  /usr/local/include/boost/bind/arg.hpp \
+  /usr/local/include/boost/bind/bind.hpp \
+  /usr/local/include/boost/bind/detail/bind_cc.hpp \
+  /usr/local/include/boost/bind/detail/bind_mf2_cc.hpp \
+  /usr/local/include/boost/bind/detail/bind_mf_cc.hpp \
+  /usr/local/include/boost/bind/detail/integer_sequence.hpp \
+  /usr/local/include/boost/bind/detail/result_traits.hpp \
+  /usr/local/include/boost/bind/detail/tuple_for_each.hpp \
+  /usr/local/include/boost/bind/mem_fn.hpp \
+  /usr/local/include/boost/bind/placeholders.hpp \
   /usr/local/include/boost/bind/std_placeholders.hpp \
+  /usr/local/include/boost/call_traits.hpp \
   /usr/local/include/boost/cerrno.hpp \
   /usr/local/include/boost/config.hpp \
+  /usr/local/include/boost/config/abi_prefix.hpp \
+  /usr/local/include/boost/config/abi_suffix.hpp \
   /usr/local/include/boost/config/compiler/gcc.hpp \
   /usr/local/include/boost/config/detail/cxx_composite.hpp \
   /usr/local/include/boost/config/detail/posix_features.hpp \
@@ -6619,6 +6790,7 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/config/detail/suffix.hpp \
   /usr/local/include/boost/config/helper_macros.hpp \
   /usr/local/include/boost/config/no_tr1/cmath.hpp \
+  /usr/local/include/boost/config/no_tr1/memory.hpp \
   /usr/local/include/boost/config/platform/linux.hpp \
   /usr/local/include/boost/config/pragma_message.hpp \
   /usr/local/include/boost/config/stdlib/libstdcpp3.hpp \
@@ -6642,6 +6814,7 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/core/checked_delete.hpp \
   /usr/local/include/boost/core/data.hpp \
   /usr/local/include/boost/core/default_allocator.hpp \
+  /usr/local/include/boost/core/demangle.hpp \
   /usr/local/include/boost/core/detail/assert.hpp \
   /usr/local/include/boost/core/detail/is_same.hpp \
   /usr/local/include/boost/core/detail/sp_thread_pause.hpp \
@@ -6655,9 +6828,16 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/core/ignore_unused.hpp \
   /usr/local/include/boost/core/invoke_swap.hpp \
   /usr/local/include/boost/core/launder.hpp \
+  /usr/local/include/boost/core/no_exceptions_support.hpp \
   /usr/local/include/boost/core/noinit_adaptor.hpp \
+  /usr/local/include/boost/core/noncopyable.hpp \
+  /usr/local/include/boost/core/nvp.hpp \
   /usr/local/include/boost/core/pointer_traits.hpp \
+  /usr/local/include/boost/core/ref.hpp \
+  /usr/local/include/boost/core/serialization.hpp \
   /usr/local/include/boost/core/span.hpp \
+  /usr/local/include/boost/core/type_name.hpp \
+  /usr/local/include/boost/core/use_default.hpp \
   /usr/local/include/boost/core/yield_primitives.hpp \
   /usr/local/include/boost/cstdint.hpp \
   /usr/local/include/boost/date_time/adjust_functors.hpp \
@@ -6713,9 +6893,26 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/describe/detail/void_t.hpp \
   /usr/local/include/boost/describe/members.hpp \
   /usr/local/include/boost/describe/modifiers.hpp \
+  /usr/local/include/boost/detail/bitmask.hpp \
+  /usr/local/include/boost/detail/call_traits.hpp \
   /usr/local/include/boost/detail/workaround.hpp \
   /usr/local/include/boost/enable_shared_from_this.hpp \
   /usr/local/include/boost/exception/exception.hpp \
+  /usr/local/include/boost/filesystem.hpp \
+  /usr/local/include/boost/filesystem/config.hpp \
+  /usr/local/include/boost/filesystem/detail/footer.hpp \
+  /usr/local/include/boost/filesystem/detail/header.hpp \
+  /usr/local/include/boost/filesystem/detail/path_traits.hpp \
+  /usr/local/include/boost/filesystem/detail/type_traits/conjunction.hpp \
+  /usr/local/include/boost/filesystem/detail/type_traits/disjunction.hpp \
+  /usr/local/include/boost/filesystem/detail/type_traits/negation.hpp \
+  /usr/local/include/boost/filesystem/directory.hpp \
+  /usr/local/include/boost/filesystem/exception.hpp \
+  /usr/local/include/boost/filesystem/file_status.hpp \
+  /usr/local/include/boost/filesystem/operations.hpp \
+  /usr/local/include/boost/filesystem/path.hpp \
+  /usr/local/include/boost/functional/hash_fwd.hpp \
+  /usr/local/include/boost/get_pointer.hpp \
   /usr/local/include/boost/intrusive/bs_set_hook.hpp \
   /usr/local/include/boost/intrusive/bstree.hpp \
   /usr/local/include/boost/intrusive/bstree_algorithms.hpp \
@@ -6776,8 +6973,27 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/intrusive/set_hook.hpp \
   /usr/local/include/boost/io/detail/buffer_fill.hpp \
   /usr/local/include/boost/io/detail/ostream_guard.hpp \
+  /usr/local/include/boost/io/ios_state.hpp \
   /usr/local/include/boost/io/ostream_put.hpp \
+  /usr/local/include/boost/io/quoted.hpp \
+  /usr/local/include/boost/io_fwd.hpp \
   /usr/local/include/boost/is_placeholder.hpp \
+  /usr/local/include/boost/iterator/detail/config_def.hpp \
+  /usr/local/include/boost/iterator/detail/config_undef.hpp \
+  /usr/local/include/boost/iterator/detail/eval_if_default.hpp \
+  /usr/local/include/boost/iterator/detail/facade_iterator_category.hpp \
+  /usr/local/include/boost/iterator/detail/type_traits/conjunction.hpp \
+  /usr/local/include/boost/iterator/detail/type_traits/disjunction.hpp \
+  /usr/local/include/boost/iterator/detail/type_traits/negation.hpp \
+  /usr/local/include/boost/iterator/detail/type_traits/type_identity.hpp \
+  /usr/local/include/boost/iterator/enable_if_convertible.hpp \
+  /usr/local/include/boost/iterator/interoperable.hpp \
+  /usr/local/include/boost/iterator/is_iterator.hpp \
+  /usr/local/include/boost/iterator/iterator_adaptor.hpp \
+  /usr/local/include/boost/iterator/iterator_categories.hpp \
+  /usr/local/include/boost/iterator/iterator_facade.hpp \
+  /usr/local/include/boost/iterator/iterator_traits.hpp \
+  /usr/local/include/boost/iterator/reverse_iterator.hpp \
   /usr/local/include/boost/limits.hpp \
   /usr/local/include/boost/logic/tribool.hpp \
   /usr/local/include/boost/logic/tribool_fwd.hpp \
@@ -6830,20 +7046,44 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/mp11/set.hpp \
   /usr/local/include/boost/mp11/utility.hpp \
   /usr/local/include/boost/mp11/version.hpp \
+  /usr/local/include/boost/mpl/O1_size.hpp \
+  /usr/local/include/boost/mpl/O1_size_fwd.hpp \
+  /usr/local/include/boost/mpl/advance.hpp \
+  /usr/local/include/boost/mpl/advance_fwd.hpp \
+  /usr/local/include/boost/mpl/always.hpp \
   /usr/local/include/boost/mpl/and.hpp \
+  /usr/local/include/boost/mpl/apply.hpp \
+  /usr/local/include/boost/mpl/apply_fwd.hpp \
   /usr/local/include/boost/mpl/apply_wrap.hpp \
+  /usr/local/include/boost/mpl/arg.hpp \
+  /usr/local/include/boost/mpl/arg_fwd.hpp \
+  /usr/local/include/boost/mpl/assert.hpp \
+  /usr/local/include/boost/mpl/at.hpp \
+  /usr/local/include/boost/mpl/at_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/O1_size_impl.hpp \
   /usr/local/include/boost/mpl/aux_/adl_barrier.hpp \
+  /usr/local/include/boost/mpl/aux_/advance_backward.hpp \
+  /usr/local/include/boost/mpl/aux_/advance_forward.hpp \
+  /usr/local/include/boost/mpl/aux_/arg_typedef.hpp \
   /usr/local/include/boost/mpl/aux_/arithmetic_op.hpp \
   /usr/local/include/boost/mpl/aux_/arity.hpp \
+  /usr/local/include/boost/mpl/aux_/arity_spec.hpp \
+  /usr/local/include/boost/mpl/aux_/at_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/begin_end_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/clear_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/common_name_wknd.hpp \
   /usr/local/include/boost/mpl/aux_/comparison_op.hpp \
   /usr/local/include/boost/mpl/aux_/config/adl.hpp \
   /usr/local/include/boost/mpl/aux_/config/arrays.hpp \
+  /usr/local/include/boost/mpl/aux_/config/bcc.hpp \
+  /usr/local/include/boost/mpl/aux_/config/bind.hpp \
   /usr/local/include/boost/mpl/aux_/config/compiler.hpp \
   /usr/local/include/boost/mpl/aux_/config/ctps.hpp \
   /usr/local/include/boost/mpl/aux_/config/dtp.hpp \
   /usr/local/include/boost/mpl/aux_/config/eti.hpp \
   /usr/local/include/boost/mpl/aux_/config/forwarding.hpp \
   /usr/local/include/boost/mpl/aux_/config/gcc.hpp \
+  /usr/local/include/boost/mpl/aux_/config/gpu.hpp \
   /usr/local/include/boost/mpl/aux_/config/has_apply.hpp \
   /usr/local/include/boost/mpl/aux_/config/has_xxx.hpp \
   /usr/local/include/boost/mpl/aux_/config/integral.hpp \
@@ -6852,65 +7092,281 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/mpl/aux_/config/msvc.hpp \
   /usr/local/include/boost/mpl/aux_/config/msvc_typename.hpp \
   /usr/local/include/boost/mpl/aux_/config/nttp.hpp \
+  /usr/local/include/boost/mpl/aux_/config/operators.hpp \
   /usr/local/include/boost/mpl/aux_/config/overload_resolution.hpp \
+  /usr/local/include/boost/mpl/aux_/config/pp_counter.hpp \
   /usr/local/include/boost/mpl/aux_/config/preprocessor.hpp \
   /usr/local/include/boost/mpl/aux_/config/static_constant.hpp \
   /usr/local/include/boost/mpl/aux_/config/ttp.hpp \
+  /usr/local/include/boost/mpl/aux_/config/typeof.hpp \
   /usr/local/include/boost/mpl/aux_/config/use_preprocessed.hpp \
   /usr/local/include/boost/mpl/aux_/config/workaround.hpp \
+  /usr/local/include/boost/mpl/aux_/contains_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/empty_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/find_if_pred.hpp \
+  /usr/local/include/boost/mpl/aux_/fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/full_lambda.hpp \
   /usr/local/include/boost/mpl/aux_/has_apply.hpp \
+  /usr/local/include/boost/mpl/aux_/has_begin.hpp \
+  /usr/local/include/boost/mpl/aux_/has_key_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/has_size.hpp \
   /usr/local/include/boost/mpl/aux_/has_tag.hpp \
+  /usr/local/include/boost/mpl/aux_/has_type.hpp \
   /usr/local/include/boost/mpl/aux_/include_preprocessed.hpp \
+  /usr/local/include/boost/mpl/aux_/insert_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/inserter_algorithm.hpp \
   /usr/local/include/boost/mpl/aux_/integral_wrapper.hpp \
   /usr/local/include/boost/mpl/aux_/is_msvc_eti_arg.hpp \
+  /usr/local/include/boost/mpl/aux_/iter_apply.hpp \
+  /usr/local/include/boost/mpl/aux_/iter_fold_if_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/iter_fold_impl.hpp \
   /usr/local/include/boost/mpl/aux_/lambda_arity_param.hpp \
+  /usr/local/include/boost/mpl/aux_/lambda_spec.hpp \
   /usr/local/include/boost/mpl/aux_/lambda_support.hpp \
   /usr/local/include/boost/mpl/aux_/largest_int.hpp \
   /usr/local/include/boost/mpl/aux_/msvc_eti_base.hpp \
   /usr/local/include/boost/mpl/aux_/msvc_never_true.hpp \
+  /usr/local/include/boost/mpl/aux_/msvc_type.hpp \
   /usr/local/include/boost/mpl/aux_/na.hpp \
+  /usr/local/include/boost/mpl/aux_/na_assert.hpp \
   /usr/local/include/boost/mpl/aux_/na_fwd.hpp \
   /usr/local/include/boost/mpl/aux_/na_spec.hpp \
   /usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp \
   /usr/local/include/boost/mpl/aux_/nttp_decl.hpp \
   /usr/local/include/boost/mpl/aux_/numeric_cast_utils.hpp \
   /usr/local/include/boost/mpl/aux_/numeric_op.hpp \
+  /usr/local/include/boost/mpl/aux_/overload_names.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/advance_backward.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_impl.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/less.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/minus.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/reverse_iter_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/times.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessor/default_params.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessor/enum.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessor/params.hpp \
+  /usr/local/include/boost/mpl/aux_/ptr_to_ref.hpp \
+  /usr/local/include/boost/mpl/aux_/push_back_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/push_front_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/reverse_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/reverse_iter_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/size_impl.hpp \
   /usr/local/include/boost/mpl/aux_/static_cast.hpp \
+  /usr/local/include/boost/mpl/aux_/template_arity.hpp \
   /usr/local/include/boost/mpl/aux_/template_arity_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/traits_lambda_spec.hpp \
   /usr/local/include/boost/mpl/aux_/type_wrapper.hpp \
   /usr/local/include/boost/mpl/aux_/value_wknd.hpp \
   /usr/local/include/boost/mpl/aux_/yes_no.hpp \
+  /usr/local/include/boost/mpl/back_fwd.hpp \
+  /usr/local/include/boost/mpl/back_inserter.hpp \
+  /usr/local/include/boost/mpl/base.hpp \
+  /usr/local/include/boost/mpl/begin_end.hpp \
+  /usr/local/include/boost/mpl/begin_end_fwd.hpp \
+  /usr/local/include/boost/mpl/bind.hpp \
+  /usr/local/include/boost/mpl/bind_fwd.hpp \
   /usr/local/include/boost/mpl/bool.hpp \
   /usr/local/include/boost/mpl/bool_fwd.hpp \
+  /usr/local/include/boost/mpl/clear.hpp \
+  /usr/local/include/boost/mpl/clear_fwd.hpp \
+  /usr/local/include/boost/mpl/contains.hpp \
+  /usr/local/include/boost/mpl/contains_fwd.hpp \
+  /usr/local/include/boost/mpl/deref.hpp \
+  /usr/local/include/boost/mpl/distance.hpp \
+  /usr/local/include/boost/mpl/distance_fwd.hpp \
+  /usr/local/include/boost/mpl/empty.hpp \
+  /usr/local/include/boost/mpl/empty_fwd.hpp \
   /usr/local/include/boost/mpl/equal_to.hpp \
+  /usr/local/include/boost/mpl/erase_fwd.hpp \
+  /usr/local/include/boost/mpl/erase_key_fwd.hpp \
   /usr/local/include/boost/mpl/eval_if.hpp \
+  /usr/local/include/boost/mpl/find.hpp \
+  /usr/local/include/boost/mpl/find_if.hpp \
+  /usr/local/include/boost/mpl/fold.hpp \
+  /usr/local/include/boost/mpl/front_fwd.hpp \
+  /usr/local/include/boost/mpl/front_inserter.hpp \
+  /usr/local/include/boost/mpl/has_key.hpp \
+  /usr/local/include/boost/mpl/has_key_fwd.hpp \
   /usr/local/include/boost/mpl/has_xxx.hpp \
   /usr/local/include/boost/mpl/identity.hpp \
   /usr/local/include/boost/mpl/if.hpp \
+  /usr/local/include/boost/mpl/insert.hpp \
+  /usr/local/include/boost/mpl/insert_fwd.hpp \
+  /usr/local/include/boost/mpl/insert_range_fwd.hpp \
+  /usr/local/include/boost/mpl/inserter.hpp \
   /usr/local/include/boost/mpl/int.hpp \
   /usr/local/include/boost/mpl/int_fwd.hpp \
   /usr/local/include/boost/mpl/integral_c.hpp \
   /usr/local/include/boost/mpl/integral_c_fwd.hpp \
   /usr/local/include/boost/mpl/integral_c_tag.hpp \
+  /usr/local/include/boost/mpl/is_sequence.hpp \
+  /usr/local/include/boost/mpl/iter_fold.hpp \
+  /usr/local/include/boost/mpl/iter_fold_if.hpp \
+  /usr/local/include/boost/mpl/iterator_category.hpp \
+  /usr/local/include/boost/mpl/iterator_range.hpp \
+  /usr/local/include/boost/mpl/iterator_tags.hpp \
+  /usr/local/include/boost/mpl/key_type_fwd.hpp \
+  /usr/local/include/boost/mpl/lambda.hpp \
   /usr/local/include/boost/mpl/lambda_fwd.hpp \
   /usr/local/include/boost/mpl/less.hpp \
   /usr/local/include/boost/mpl/limits/arity.hpp \
+  /usr/local/include/boost/mpl/limits/vector.hpp \
+  /usr/local/include/boost/mpl/logical.hpp \
+  /usr/local/include/boost/mpl/long.hpp \
+  /usr/local/include/boost/mpl/long_fwd.hpp \
+  /usr/local/include/boost/mpl/min_max.hpp \
+  /usr/local/include/boost/mpl/minus.hpp \
   /usr/local/include/boost/mpl/multiplies.hpp \
+  /usr/local/include/boost/mpl/negate.hpp \
+  /usr/local/include/boost/mpl/next.hpp \
+  /usr/local/include/boost/mpl/next_prior.hpp \
   /usr/local/include/boost/mpl/not.hpp \
   /usr/local/include/boost/mpl/numeric_cast.hpp \
+  /usr/local/include/boost/mpl/or.hpp \
+  /usr/local/include/boost/mpl/pair.hpp \
+  /usr/local/include/boost/mpl/pair_view.hpp \
+  /usr/local/include/boost/mpl/placeholders.hpp \
+  /usr/local/include/boost/mpl/plus.hpp \
+  /usr/local/include/boost/mpl/pop_back_fwd.hpp \
+  /usr/local/include/boost/mpl/pop_front_fwd.hpp \
+  /usr/local/include/boost/mpl/prior.hpp \
+  /usr/local/include/boost/mpl/protect.hpp \
+  /usr/local/include/boost/mpl/push_back.hpp \
+  /usr/local/include/boost/mpl/push_back_fwd.hpp \
+  /usr/local/include/boost/mpl/push_front.hpp \
+  /usr/local/include/boost/mpl/push_front_fwd.hpp \
+  /usr/local/include/boost/mpl/quote.hpp \
+  /usr/local/include/boost/mpl/reverse_fold.hpp \
+  /usr/local/include/boost/mpl/reverse_iter_fold.hpp \
+  /usr/local/include/boost/mpl/same_as.hpp \
+  /usr/local/include/boost/mpl/sequence_tag.hpp \
+  /usr/local/include/boost/mpl/sequence_tag_fwd.hpp \
+  /usr/local/include/boost/mpl/set/aux_/at_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/begin_end_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/clear_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/empty_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/erase_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/erase_key_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/has_key_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/insert_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/insert_range_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/item.hpp \
+  /usr/local/include/boost/mpl/set/aux_/iterator.hpp \
+  /usr/local/include/boost/mpl/set/aux_/key_type_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/set0.hpp \
+  /usr/local/include/boost/mpl/set/aux_/size_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/tag.hpp \
+  /usr/local/include/boost/mpl/set/aux_/value_type_impl.hpp \
+  /usr/local/include/boost/mpl/set/set0.hpp \
+  /usr/local/include/boost/mpl/size.hpp \
+  /usr/local/include/boost/mpl/size_fwd.hpp \
   /usr/local/include/boost/mpl/tag.hpp \
   /usr/local/include/boost/mpl/times.hpp \
+  /usr/local/include/boost/mpl/transform.hpp \
+  /usr/local/include/boost/mpl/value_type_fwd.hpp \
+  /usr/local/include/boost/mpl/vector.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/O1_size.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/at.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/back.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/begin_end.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/clear.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/empty.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/front.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/include_preprocessed.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/item.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/iterator.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/pop_back.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/pop_front.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector10.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector20.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/push_back.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/push_front.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/size.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/tag.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/vector0.hpp \
+  /usr/local/include/boost/mpl/vector/vector0.hpp \
+  /usr/local/include/boost/mpl/vector/vector10.hpp \
+  /usr/local/include/boost/mpl/vector/vector20.hpp \
   /usr/local/include/boost/mpl/void.hpp \
   /usr/local/include/boost/mpl/void_fwd.hpp \
+  /usr/local/include/boost/multi_index/detail/access_specifier.hpp \
+  /usr/local/include/boost/multi_index/detail/adl_swap.hpp \
+  /usr/local/include/boost/multi_index/detail/allocator_traits.hpp \
+  /usr/local/include/boost/multi_index/detail/archive_constructed.hpp \
+  /usr/local/include/boost/multi_index/detail/auto_space.hpp \
+  /usr/local/include/boost/multi_index/detail/bad_archive_exception.hpp \
+  /usr/local/include/boost/multi_index/detail/base_type.hpp \
+  /usr/local/include/boost/multi_index/detail/bidir_node_iterator.hpp \
+  /usr/local/include/boost/multi_index/detail/converter.hpp \
+  /usr/local/include/boost/multi_index/detail/copy_map.hpp \
+  /usr/local/include/boost/multi_index/detail/define_if_constexpr_macro.hpp \
+  /usr/local/include/boost/multi_index/detail/do_not_copy_elements_tag.hpp \
+  /usr/local/include/boost/multi_index/detail/duplicates_iterator.hpp \
+  /usr/local/include/boost/multi_index/detail/has_tag.hpp \
+  /usr/local/include/boost/multi_index/detail/header_holder.hpp \
+  /usr/local/include/boost/multi_index/detail/ignore_wstrict_aliasing.hpp \
+  /usr/local/include/boost/multi_index/detail/index_access_sequence.hpp \
+  /usr/local/include/boost/multi_index/detail/index_base.hpp \
+  /usr/local/include/boost/multi_index/detail/index_loader.hpp \
+  /usr/local/include/boost/multi_index/detail/index_matcher.hpp \
+  /usr/local/include/boost/multi_index/detail/index_node_base.hpp \
+  /usr/local/include/boost/multi_index/detail/index_saver.hpp \
+  /usr/local/include/boost/multi_index/detail/invalidate_iterators.hpp \
+  /usr/local/include/boost/multi_index/detail/is_index_list.hpp \
+  /usr/local/include/boost/multi_index/detail/is_transparent.hpp \
+  /usr/local/include/boost/multi_index/detail/modify_key_adaptor.hpp \
+  /usr/local/include/boost/multi_index/detail/no_duplicate_tags.hpp \
+  /usr/local/include/boost/multi_index/detail/node_handle.hpp \
+  /usr/local/include/boost/multi_index/detail/node_type.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_args.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_impl.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_impl_fwd.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_node.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_ops.hpp \
+  /usr/local/include/boost/multi_index/detail/promotes_arg.hpp \
+  /usr/local/include/boost/multi_index/detail/raw_ptr.hpp \
+  /usr/local/include/boost/multi_index/detail/restore_wstrict_aliasing.hpp \
+  /usr/local/include/boost/multi_index/detail/safe_mode.hpp \
+  /usr/local/include/boost/multi_index/detail/scope_guard.hpp \
+  /usr/local/include/boost/multi_index/detail/seq_index_node.hpp \
+  /usr/local/include/boost/multi_index/detail/seq_index_ops.hpp \
+  /usr/local/include/boost/multi_index/detail/serialization_version.hpp \
+  /usr/local/include/boost/multi_index/detail/uintptr_type.hpp \
+  /usr/local/include/boost/multi_index/detail/unbounded.hpp \
+  /usr/local/include/boost/multi_index/detail/undef_if_constexpr_macro.hpp \
+  /usr/local/include/boost/multi_index/detail/value_compare.hpp \
+  /usr/local/include/boost/multi_index/detail/vartempl_support.hpp \
+  /usr/local/include/boost/multi_index/identity.hpp \
+  /usr/local/include/boost/multi_index/identity_fwd.hpp \
+  /usr/local/include/boost/multi_index/indexed_by.hpp \
+  /usr/local/include/boost/multi_index/member.hpp \
+  /usr/local/include/boost/multi_index/ordered_index.hpp \
+  /usr/local/include/boost/multi_index/ordered_index_fwd.hpp \
+  /usr/local/include/boost/multi_index/sequenced_index.hpp \
+  /usr/local/include/boost/multi_index/sequenced_index_fwd.hpp \
+  /usr/local/include/boost/multi_index/tag.hpp \
+  /usr/local/include/boost/multi_index_container.hpp \
+  /usr/local/include/boost/multi_index_container_fwd.hpp \
   /usr/local/include/boost/none.hpp \
   /usr/local/include/boost/none_t.hpp \
   /usr/local/include/boost/numeric/conversion/bounds.hpp \
@@ -6947,6 +7403,7 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/optional/detail/optional_utility.hpp \
   /usr/local/include/boost/optional/optional.hpp \
   /usr/local/include/boost/optional/optional_fwd.hpp \
+  /usr/local/include/boost/optional/optional_io.hpp \
   /usr/local/include/boost/preprocessor/arithmetic/add.hpp \
   /usr/local/include/boost/preprocessor/arithmetic/dec.hpp \
   /usr/local/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
@@ -6968,6 +7425,7 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/preprocessor/config/limits.hpp \
   /usr/local/include/boost/preprocessor/control/detail/limits/while_256.hpp \
   /usr/local/include/boost/preprocessor/control/detail/while.hpp \
+  /usr/local/include/boost/preprocessor/control/expr_if.hpp \
   /usr/local/include/boost/preprocessor/control/expr_iif.hpp \
   /usr/local/include/boost/preprocessor/control/if.hpp \
   /usr/local/include/boost/preprocessor/control/iif.hpp \
@@ -6983,6 +7441,8 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/preprocessor/facilities/empty.hpp \
   /usr/local/include/boost/preprocessor/facilities/expand.hpp \
   /usr/local/include/boost/preprocessor/facilities/identity.hpp \
+  /usr/local/include/boost/preprocessor/facilities/intercept.hpp \
+  /usr/local/include/boost/preprocessor/facilities/limits/intercept_256.hpp \
   /usr/local/include/boost/preprocessor/facilities/overload.hpp \
   /usr/local/include/boost/preprocessor/identity.hpp \
   /usr/local/include/boost/preprocessor/inc.hpp \
@@ -7005,10 +7465,13 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/preprocessor/punctuation/comma.hpp \
   /usr/local/include/boost/preprocessor/punctuation/comma_if.hpp \
   /usr/local/include/boost/preprocessor/repeat.hpp \
+  /usr/local/include/boost/preprocessor/repetition/enum.hpp \
+  /usr/local/include/boost/preprocessor/repetition/enum_binary_params.hpp \
   /usr/local/include/boost/preprocessor/repetition/enum_params.hpp \
   /usr/local/include/boost/preprocessor/repetition/enum_trailing_params.hpp \
   /usr/local/include/boost/preprocessor/repetition/limits/repeat_256.hpp \
   /usr/local/include/boost/preprocessor/repetition/repeat.hpp \
+  /usr/local/include/boost/preprocessor/repetition/repeat_from_to.hpp \
   /usr/local/include/boost/preprocessor/stringize.hpp \
   /usr/local/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
   /usr/local/include/boost/preprocessor/tuple/eat.hpp \
@@ -7019,9 +7482,22 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/preprocessor/variadic/limits/elem_64.hpp \
   /usr/local/include/boost/preprocessor/variadic/limits/size_64.hpp \
   /usr/local/include/boost/preprocessor/variadic/size.hpp \
+  /usr/local/include/boost/property_tree/detail/exception_implementation.hpp \
+  /usr/local/include/boost/property_tree/detail/file_parser_error.hpp \
+  /usr/local/include/boost/property_tree/detail/ptree_implementation.hpp \
+  /usr/local/include/boost/property_tree/detail/ptree_utils.hpp \
+  /usr/local/include/boost/property_tree/exceptions.hpp \
+  /usr/local/include/boost/property_tree/id_translator.hpp \
+  /usr/local/include/boost/property_tree/ini_parser.hpp \
+  /usr/local/include/boost/property_tree/ptree.hpp \
+  /usr/local/include/boost/property_tree/ptree_fwd.hpp \
+  /usr/local/include/boost/property_tree/stream_translator.hpp \
+  /usr/local/include/boost/property_tree/string_path.hpp \
   /usr/local/include/boost/shared_ptr.hpp \
   /usr/local/include/boost/smart_ptr/allocate_shared_array.hpp \
   /usr/local/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /usr/local/include/boost/smart_ptr/detail/atomic_count.hpp \
+  /usr/local/include/boost/smart_ptr/detail/atomic_count_gcc_atomic.hpp \
   /usr/local/include/boost/smart_ptr/detail/deprecated_macros.hpp \
   /usr/local/include/boost/smart_ptr/detail/local_counted_base.hpp \
   /usr/local/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
@@ -7041,6 +7517,8 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/smart_ptr/detail/spinlock_pool.hpp \
   /usr/local/include/boost/smart_ptr/detail/yield_k.hpp \
   /usr/local/include/boost/smart_ptr/enable_shared_from_this.hpp \
+  /usr/local/include/boost/smart_ptr/intrusive_ptr.hpp \
+  /usr/local/include/boost/smart_ptr/intrusive_ref_counter.hpp \
   /usr/local/include/boost/smart_ptr/make_shared.hpp \
   /usr/local/include/boost/smart_ptr/make_shared_array.hpp \
   /usr/local/include/boost/smart_ptr/make_shared_object.hpp \
@@ -7082,7 +7560,12 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/system/system_category.hpp \
   /usr/local/include/boost/system/system_error.hpp \
   /usr/local/include/boost/throw_exception.hpp \
+  /usr/local/include/boost/tuple/detail/tuple_basic.hpp \
+  /usr/local/include/boost/tuple/tuple.hpp \
   /usr/local/include/boost/type.hpp \
+  /usr/local/include/boost/type_index.hpp \
+  /usr/local/include/boost/type_index/stl_type_index.hpp \
+  /usr/local/include/boost/type_index/type_index_facade.hpp \
   /usr/local/include/boost/type_traits.hpp \
   /usr/local/include/boost/type_traits/add_const.hpp \
   /usr/local/include/boost/type_traits/add_cv.hpp \
@@ -7099,6 +7582,7 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/type_traits/copy_cv.hpp \
   /usr/local/include/boost/type_traits/copy_cv_ref.hpp \
   /usr/local/include/boost/type_traits/copy_reference.hpp \
+  /usr/local/include/boost/type_traits/cv_traits.hpp \
   /usr/local/include/boost/type_traits/decay.hpp \
   /usr/local/include/boost/type_traits/declval.hpp \
   /usr/local/include/boost/type_traits/detail/config.hpp \
@@ -7238,9 +7722,12 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/boost/type_traits/remove_volatile.hpp \
   /usr/local/include/boost/type_traits/type_identity.hpp \
   /usr/local/include/boost/type_traits/type_with_alignment.hpp \
+  /usr/local/include/boost/utility/base_from_member.hpp \
+  /usr/local/include/boost/utility/enable_if.hpp \
   /usr/local/include/boost/utility/string_view.hpp \
   /usr/local/include/boost/utility/string_view_fwd.hpp \
   /usr/local/include/boost/version.hpp \
+  /usr/local/include/boost/visit_each.hpp \
   /usr/local/include/google/protobuf/any.h \
   /usr/local/include/google/protobuf/any.pb.h \
   /usr/local/include/google/protobuf/arena.h \
@@ -7402,6 +7889,10 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/grpcpp/support/sync_stream.h \
   /usr/local/include/grpcpp/support/time.h \
   /usr/local/include/grpcpp/version_info.h \
+  /usr/local/include/hiredis/alloc.h \
+  /usr/local/include/hiredis/hiredis.h \
+  /usr/local/include/hiredis/read.h \
+  /usr/local/include/hiredis/sds.h \
   /usr/local/include/nlohmann/adl_serializer.hpp \
   /usr/local/include/nlohmann/byte_container_with_subtype.hpp \
   /usr/local/include/nlohmann/detail/abi_macros.hpp \
@@ -7447,14 +7938,1256 @@ CMakeFiles/GateServer.dir/LogicSystem.cc.o: /home/lunisolar/cpp/LCServer/GateSer
   /usr/local/include/nlohmann/json_fwd.hpp \
   /usr/local/include/nlohmann/ordered_map.hpp \
   /usr/local/include/nlohmann/thirdparty/hedley/hedley.hpp \
-  /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+  /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/local/include/sw/redis++/command.h \
+  /usr/local/include/sw/redis++/command_args.h \
+  /usr/local/include/sw/redis++/command_options.h \
+  /usr/local/include/sw/redis++/connection.h \
+  /usr/local/include/sw/redis++/connection_pool.h \
+  /usr/local/include/sw/redis++/cxx_utils.h \
+  /usr/local/include/sw/redis++/errors.h \
+  /usr/local/include/sw/redis++/hiredis_features.h \
+  /usr/local/include/sw/redis++/pipeline.h \
+  /usr/local/include/sw/redis++/queued_redis.h \
+  /usr/local/include/sw/redis++/queued_redis.hpp \
+  /usr/local/include/sw/redis++/redis++.h \
+  /usr/local/include/sw/redis++/redis.h \
+  /usr/local/include/sw/redis++/redis.hpp \
+  /usr/local/include/sw/redis++/redis_cluster.h \
+  /usr/local/include/sw/redis++/redis_cluster.hpp \
+  /usr/local/include/sw/redis++/redis_uri.h \
+  /usr/local/include/sw/redis++/reply.h \
+  /usr/local/include/sw/redis++/sentinel.h \
+  /usr/local/include/sw/redis++/shards.h \
+  /usr/local/include/sw/redis++/shards_pool.h \
+  /usr/local/include/sw/redis++/subscriber.h \
+  /usr/local/include/sw/redis++/tls.h \
+  /usr/local/include/sw/redis++/transaction.h \
+  /usr/local/include/sw/redis++/utils.h
+
+CMakeFiles/GateServer.dir/MysqlDao.cc.o: /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.cc \
+  /home/lunisolar/cpp/LCServer/GateServer/ConfigMgr.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.h \
+  /home/lunisolar/cpp/LCServer/GateServer/singleton.h \
+  /home/lunisolar/cpp/LCServer/GateServer/snowflake.h \
+  /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/assert.h \
+  /usr/include/c++/9/algorithm \
+  /usr/include/c++/9/array \
+  /usr/include/c++/9/atomic \
+  /usr/include/c++/9/backward/auto_ptr.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/bits/algorithmfwd.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
+  /usr/include/c++/9/bits/allocated_ptr.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/c++/9/bits/atomic_base.h \
+  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/9/bits/basic_ios.h \
+  /usr/include/c++/9/bits/basic_ios.tcc \
+  /usr/include/c++/9/bits/basic_string.h \
+  /usr/include/c++/9/bits/basic_string.tcc \
+  /usr/include/c++/9/bits/char_traits.h \
+  /usr/include/c++/9/bits/codecvt.h \
+  /usr/include/c++/9/bits/concept_check.h \
+  /usr/include/c++/9/bits/cpp_type_traits.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/bits/deque.tcc \
+  /usr/include/c++/9/bits/enable_special_members.h \
+  /usr/include/c++/9/bits/erase_if.h \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_defines.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/fstream.tcc \
+  /usr/include/c++/9/bits/functexcept.h \
+  /usr/include/c++/9/bits/functional_hash.h \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/hashtable.h \
+  /usr/include/c++/9/bits/hashtable_policy.h \
+  /usr/include/c++/9/bits/invoke.h \
+  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/locale_classes.h \
+  /usr/include/c++/9/bits/locale_classes.tcc \
+  /usr/include/c++/9/bits/locale_conv.h \
+  /usr/include/c++/9/bits/locale_facets.h \
+  /usr/include/c++/9/bits/locale_facets.tcc \
+  /usr/include/c++/9/bits/locale_facets_nonio.h \
+  /usr/include/c++/9/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/9/bits/localefwd.h \
+  /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/move.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/bits/node_handle.h \
+  /usr/include/c++/9/bits/ostream.tcc \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/parse_numbers.h \
+  /usr/include/c++/9/bits/postypes.h \
+  /usr/include/c++/9/bits/predefined_ops.h \
+  /usr/include/c++/9/bits/ptr_traits.h \
+  /usr/include/c++/9/bits/quoted_string.h \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/refwrap.h \
+  /usr/include/c++/9/bits/shared_ptr.h \
+  /usr/include/c++/9/bits/shared_ptr_atomic.h \
+  /usr/include/c++/9/bits/shared_ptr_base.h \
+  /usr/include/c++/9/bits/sstream.tcc \
+  /usr/include/c++/9/bits/std_abs.h \
+  /usr/include/c++/9/bits/std_function.h \
+  /usr/include/c++/9/bits/std_mutex.h \
+  /usr/include/c++/9/bits/stl_algo.h \
+  /usr/include/c++/9/bits/stl_algobase.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_deque.h \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/bits/stl_heap.h \
+  /usr/include/c++/9/bits/stl_iterator.h \
+  /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_map.h \
+  /usr/include/c++/9/bits/stl_multimap.h \
+  /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_queue.h \
+  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/9/bits/stl_relops.h \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_tree.h \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/stream_iterator.h \
+  /usr/include/c++/9/bits/streambuf.tcc \
+  /usr/include/c++/9/bits/streambuf_iterator.h \
+  /usr/include/c++/9/bits/string_view.tcc \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/uniform_int_dist.h \
+  /usr/include/c++/9/bits/unique_lock.h \
+  /usr/include/c++/9/bits/unique_ptr.h \
+  /usr/include/c++/9/bits/unordered_map.h \
+  /usr/include/c++/9/bits/uses_allocator.h \
+  /usr/include/c++/9/bits/vector.tcc \
+  /usr/include/c++/9/cassert \
+  /usr/include/c++/9/cctype \
+  /usr/include/c++/9/cerrno \
+  /usr/include/c++/9/chrono \
+  /usr/include/c++/9/clocale \
+  /usr/include/c++/9/condition_variable \
+  /usr/include/c++/9/cstddef \
+  /usr/include/c++/9/cstdint \
+  /usr/include/c++/9/cstdio \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/c++/9/cstring \
+  /usr/include/c++/9/ctime \
+  /usr/include/c++/9/cwchar \
+  /usr/include/c++/9/cwctype \
+  /usr/include/c++/9/cxxabi.h \
+  /usr/include/c++/9/debug/assertions.h \
+  /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/deque \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/ext/aligned_buffer.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/ext/atomicity.h \
+  /usr/include/c++/9/ext/concurrence.h \
+  /usr/include/c++/9/ext/new_allocator.h \
+  /usr/include/c++/9/ext/numeric_traits.h \
+  /usr/include/c++/9/ext/string_conversions.h \
+  /usr/include/c++/9/ext/type_traits.h \
+  /usr/include/c++/9/fstream \
+  /usr/include/c++/9/functional \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/iomanip \
+  /usr/include/c++/9/ios \
+  /usr/include/c++/9/iosfwd \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/istream \
+  /usr/include/c++/9/iterator \
+  /usr/include/c++/9/limits \
+  /usr/include/c++/9/locale \
+  /usr/include/c++/9/map \
+  /usr/include/c++/9/memory \
+  /usr/include/c++/9/mutex \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/optional \
+  /usr/include/c++/9/ostream \
+  /usr/include/c++/9/pstl/execution_defs.h \
+  /usr/include/c++/9/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/9/pstl/glue_memory_defs.h \
+  /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/queue \
+  /usr/include/c++/9/ratio \
+  /usr/include/c++/9/sstream \
+  /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/stdlib.h \
+  /usr/include/c++/9/streambuf \
+  /usr/include/c++/9/string \
+  /usr/include/c++/9/string_view \
+  /usr/include/c++/9/system_error \
+  /usr/include/c++/9/thread \
+  /usr/include/c++/9/tuple \
+  /usr/include/c++/9/type_traits \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/unordered_map \
+  /usr/include/c++/9/utility \
+  /usr/include/c++/9/vector \
+  /usr/include/c++/9/version \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features.h \
+  /usr/include/libintl.h \
+  /usr/include/limits.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
+  /usr/include/locale.h \
+  /usr/include/mysql/client_plugin.h \
+  /usr/include/mysql/errmsg.h \
+  /usr/include/mysql/field_types.h \
+  /usr/include/mysql/my_command.h \
+  /usr/include/mysql/my_compress.h \
+  /usr/include/mysql/my_list.h \
+  /usr/include/mysql/mysql.h \
+  /usr/include/mysql/mysql_com.h \
+  /usr/include/mysql/mysql_time.h \
+  /usr/include/mysql/mysql_version.h \
+  /usr/include/mysql/plugin_auth_common.h \
+  /usr/include/mysql/udf_registration_types.h \
+  /usr/include/openssl/asn1.h \
+  /usr/include/openssl/asn1err.h \
+  /usr/include/openssl/bio.h \
+  /usr/include/openssl/bioerr.h \
+  /usr/include/openssl/bn.h \
+  /usr/include/openssl/bnerr.h \
+  /usr/include/openssl/crypto.h \
+  /usr/include/openssl/cryptoerr.h \
+  /usr/include/openssl/e_os2.h \
+  /usr/include/openssl/evp.h \
+  /usr/include/openssl/evperr.h \
+  /usr/include/openssl/obj_mac.h \
+  /usr/include/openssl/objects.h \
+  /usr/include/openssl/objectserr.h \
+  /usr/include/openssl/opensslv.h \
+  /usr/include/openssl/ossl_typ.h \
+  /usr/include/openssl/rand.h \
+  /usr/include/openssl/randerr.h \
+  /usr/include/openssl/safestack.h \
+  /usr/include/openssl/sha.h \
+  /usr/include/openssl/stack.h \
+  /usr/include/openssl/symhacks.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/time.h \
+  /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cxxabi_tweaks.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
+  /usr/local/include/boost/any.hpp \
+  /usr/local/include/boost/any/bad_any_cast.hpp \
+  /usr/local/include/boost/any/detail/placeholder.hpp \
+  /usr/local/include/boost/any/fwd.hpp \
+  /usr/local/include/boost/assert.hpp \
+  /usr/local/include/boost/assert/source_location.hpp \
+  /usr/local/include/boost/bind/arg.hpp \
+  /usr/local/include/boost/bind/bind.hpp \
+  /usr/local/include/boost/bind/detail/bind_cc.hpp \
+  /usr/local/include/boost/bind/detail/bind_mf2_cc.hpp \
+  /usr/local/include/boost/bind/detail/bind_mf_cc.hpp \
+  /usr/local/include/boost/bind/detail/integer_sequence.hpp \
+  /usr/local/include/boost/bind/detail/result_traits.hpp \
+  /usr/local/include/boost/bind/detail/tuple_for_each.hpp \
+  /usr/local/include/boost/bind/mem_fn.hpp \
+  /usr/local/include/boost/bind/placeholders.hpp \
+  /usr/local/include/boost/bind/std_placeholders.hpp \
+  /usr/local/include/boost/call_traits.hpp \
+  /usr/local/include/boost/config.hpp \
+  /usr/local/include/boost/config/abi_prefix.hpp \
+  /usr/local/include/boost/config/abi_suffix.hpp \
+  /usr/local/include/boost/config/compiler/gcc.hpp \
+  /usr/local/include/boost/config/detail/cxx_composite.hpp \
+  /usr/local/include/boost/config/detail/posix_features.hpp \
+  /usr/local/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/local/include/boost/config/detail/select_platform_config.hpp \
+  /usr/local/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/local/include/boost/config/detail/suffix.hpp \
+  /usr/local/include/boost/config/helper_macros.hpp \
+  /usr/local/include/boost/config/no_tr1/memory.hpp \
+  /usr/local/include/boost/config/platform/linux.hpp \
+  /usr/local/include/boost/config/pragma_message.hpp \
+  /usr/local/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/local/include/boost/config/user.hpp \
+  /usr/local/include/boost/config/workaround.hpp \
+  /usr/local/include/boost/container_hash/hash_fwd.hpp \
+  /usr/local/include/boost/core/addressof.hpp \
+  /usr/local/include/boost/core/demangle.hpp \
+  /usr/local/include/boost/core/enable_if.hpp \
+  /usr/local/include/boost/core/invoke_swap.hpp \
+  /usr/local/include/boost/core/launder.hpp \
+  /usr/local/include/boost/core/no_exceptions_support.hpp \
+  /usr/local/include/boost/core/noncopyable.hpp \
+  /usr/local/include/boost/core/nvp.hpp \
+  /usr/local/include/boost/core/ref.hpp \
+  /usr/local/include/boost/core/serialization.hpp \
+  /usr/local/include/boost/core/type_name.hpp \
+  /usr/local/include/boost/core/use_default.hpp \
+  /usr/local/include/boost/cstdint.hpp \
+  /usr/local/include/boost/detail/bitmask.hpp \
+  /usr/local/include/boost/detail/call_traits.hpp \
+  /usr/local/include/boost/detail/workaround.hpp \
+  /usr/local/include/boost/exception/exception.hpp \
+  /usr/local/include/boost/filesystem.hpp \
+  /usr/local/include/boost/filesystem/config.hpp \
+  /usr/local/include/boost/filesystem/detail/footer.hpp \
+  /usr/local/include/boost/filesystem/detail/header.hpp \
+  /usr/local/include/boost/filesystem/detail/path_traits.hpp \
+  /usr/local/include/boost/filesystem/detail/type_traits/conjunction.hpp \
+  /usr/local/include/boost/filesystem/detail/type_traits/disjunction.hpp \
+  /usr/local/include/boost/filesystem/detail/type_traits/negation.hpp \
+  /usr/local/include/boost/filesystem/directory.hpp \
+  /usr/local/include/boost/filesystem/exception.hpp \
+  /usr/local/include/boost/filesystem/file_status.hpp \
+  /usr/local/include/boost/filesystem/operations.hpp \
+  /usr/local/include/boost/filesystem/path.hpp \
+  /usr/local/include/boost/functional/hash_fwd.hpp \
+  /usr/local/include/boost/get_pointer.hpp \
+  /usr/local/include/boost/io/detail/buffer_fill.hpp \
+  /usr/local/include/boost/io/detail/ostream_guard.hpp \
+  /usr/local/include/boost/io/ios_state.hpp \
+  /usr/local/include/boost/io/quoted.hpp \
+  /usr/local/include/boost/io_fwd.hpp \
+  /usr/local/include/boost/is_placeholder.hpp \
+  /usr/local/include/boost/iterator/detail/config_def.hpp \
+  /usr/local/include/boost/iterator/detail/config_undef.hpp \
+  /usr/local/include/boost/iterator/detail/eval_if_default.hpp \
+  /usr/local/include/boost/iterator/detail/facade_iterator_category.hpp \
+  /usr/local/include/boost/iterator/detail/type_traits/conjunction.hpp \
+  /usr/local/include/boost/iterator/detail/type_traits/disjunction.hpp \
+  /usr/local/include/boost/iterator/detail/type_traits/negation.hpp \
+  /usr/local/include/boost/iterator/detail/type_traits/type_identity.hpp \
+  /usr/local/include/boost/iterator/enable_if_convertible.hpp \
+  /usr/local/include/boost/iterator/interoperable.hpp \
+  /usr/local/include/boost/iterator/is_iterator.hpp \
+  /usr/local/include/boost/iterator/iterator_adaptor.hpp \
+  /usr/local/include/boost/iterator/iterator_categories.hpp \
+  /usr/local/include/boost/iterator/iterator_facade.hpp \
+  /usr/local/include/boost/iterator/iterator_traits.hpp \
+  /usr/local/include/boost/iterator/reverse_iterator.hpp \
+  /usr/local/include/boost/limits.hpp \
+  /usr/local/include/boost/move/core.hpp \
+  /usr/local/include/boost/move/detail/addressof.hpp \
+  /usr/local/include/boost/move/detail/config_begin.hpp \
+  /usr/local/include/boost/move/detail/config_end.hpp \
+  /usr/local/include/boost/move/detail/meta_utils.hpp \
+  /usr/local/include/boost/move/detail/meta_utils_core.hpp \
+  /usr/local/include/boost/move/detail/workaround.hpp \
+  /usr/local/include/boost/move/utility_core.hpp \
+  /usr/local/include/boost/mp11/detail/config.hpp \
+  /usr/local/include/boost/mp11/detail/mp_defer.hpp \
+  /usr/local/include/boost/mp11/detail/mp_fold.hpp \
+  /usr/local/include/boost/mp11/detail/mp_front.hpp \
+  /usr/local/include/boost/mp11/detail/mp_list.hpp \
+  /usr/local/include/boost/mp11/detail/mp_rename.hpp \
+  /usr/local/include/boost/mp11/detail/mp_value.hpp \
+  /usr/local/include/boost/mp11/integral.hpp \
+  /usr/local/include/boost/mp11/utility.hpp \
+  /usr/local/include/boost/mp11/version.hpp \
+  /usr/local/include/boost/mpl/O1_size.hpp \
+  /usr/local/include/boost/mpl/O1_size_fwd.hpp \
+  /usr/local/include/boost/mpl/advance.hpp \
+  /usr/local/include/boost/mpl/advance_fwd.hpp \
+  /usr/local/include/boost/mpl/always.hpp \
+  /usr/local/include/boost/mpl/and.hpp \
+  /usr/local/include/boost/mpl/apply.hpp \
+  /usr/local/include/boost/mpl/apply_fwd.hpp \
+  /usr/local/include/boost/mpl/apply_wrap.hpp \
+  /usr/local/include/boost/mpl/arg.hpp \
+  /usr/local/include/boost/mpl/arg_fwd.hpp \
+  /usr/local/include/boost/mpl/assert.hpp \
+  /usr/local/include/boost/mpl/at.hpp \
+  /usr/local/include/boost/mpl/at_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/O1_size_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/adl_barrier.hpp \
+  /usr/local/include/boost/mpl/aux_/advance_backward.hpp \
+  /usr/local/include/boost/mpl/aux_/advance_forward.hpp \
+  /usr/local/include/boost/mpl/aux_/arg_typedef.hpp \
+  /usr/local/include/boost/mpl/aux_/arithmetic_op.hpp \
+  /usr/local/include/boost/mpl/aux_/arity.hpp \
+  /usr/local/include/boost/mpl/aux_/arity_spec.hpp \
+  /usr/local/include/boost/mpl/aux_/at_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/begin_end_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/clear_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/common_name_wknd.hpp \
+  /usr/local/include/boost/mpl/aux_/comparison_op.hpp \
+  /usr/local/include/boost/mpl/aux_/config/adl.hpp \
+  /usr/local/include/boost/mpl/aux_/config/arrays.hpp \
+  /usr/local/include/boost/mpl/aux_/config/bcc.hpp \
+  /usr/local/include/boost/mpl/aux_/config/bind.hpp \
+  /usr/local/include/boost/mpl/aux_/config/compiler.hpp \
+  /usr/local/include/boost/mpl/aux_/config/ctps.hpp \
+  /usr/local/include/boost/mpl/aux_/config/dtp.hpp \
+  /usr/local/include/boost/mpl/aux_/config/eti.hpp \
+  /usr/local/include/boost/mpl/aux_/config/forwarding.hpp \
+  /usr/local/include/boost/mpl/aux_/config/gcc.hpp \
+  /usr/local/include/boost/mpl/aux_/config/gpu.hpp \
+  /usr/local/include/boost/mpl/aux_/config/has_apply.hpp \
+  /usr/local/include/boost/mpl/aux_/config/has_xxx.hpp \
+  /usr/local/include/boost/mpl/aux_/config/integral.hpp \
+  /usr/local/include/boost/mpl/aux_/config/intel.hpp \
+  /usr/local/include/boost/mpl/aux_/config/lambda.hpp \
+  /usr/local/include/boost/mpl/aux_/config/msvc.hpp \
+  /usr/local/include/boost/mpl/aux_/config/msvc_typename.hpp \
+  /usr/local/include/boost/mpl/aux_/config/nttp.hpp \
+  /usr/local/include/boost/mpl/aux_/config/operators.hpp \
+  /usr/local/include/boost/mpl/aux_/config/overload_resolution.hpp \
+  /usr/local/include/boost/mpl/aux_/config/pp_counter.hpp \
+  /usr/local/include/boost/mpl/aux_/config/preprocessor.hpp \
+  /usr/local/include/boost/mpl/aux_/config/static_constant.hpp \
+  /usr/local/include/boost/mpl/aux_/config/ttp.hpp \
+  /usr/local/include/boost/mpl/aux_/config/typeof.hpp \
+  /usr/local/include/boost/mpl/aux_/config/use_preprocessed.hpp \
+  /usr/local/include/boost/mpl/aux_/config/workaround.hpp \
+  /usr/local/include/boost/mpl/aux_/contains_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/empty_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/find_if_pred.hpp \
+  /usr/local/include/boost/mpl/aux_/fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/full_lambda.hpp \
+  /usr/local/include/boost/mpl/aux_/has_apply.hpp \
+  /usr/local/include/boost/mpl/aux_/has_begin.hpp \
+  /usr/local/include/boost/mpl/aux_/has_key_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/has_size.hpp \
+  /usr/local/include/boost/mpl/aux_/has_tag.hpp \
+  /usr/local/include/boost/mpl/aux_/has_type.hpp \
+  /usr/local/include/boost/mpl/aux_/include_preprocessed.hpp \
+  /usr/local/include/boost/mpl/aux_/insert_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/inserter_algorithm.hpp \
+  /usr/local/include/boost/mpl/aux_/integral_wrapper.hpp \
+  /usr/local/include/boost/mpl/aux_/is_msvc_eti_arg.hpp \
+  /usr/local/include/boost/mpl/aux_/iter_apply.hpp \
+  /usr/local/include/boost/mpl/aux_/iter_fold_if_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/iter_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/lambda_arity_param.hpp \
+  /usr/local/include/boost/mpl/aux_/lambda_spec.hpp \
+  /usr/local/include/boost/mpl/aux_/lambda_support.hpp \
+  /usr/local/include/boost/mpl/aux_/largest_int.hpp \
+  /usr/local/include/boost/mpl/aux_/msvc_eti_base.hpp \
+  /usr/local/include/boost/mpl/aux_/msvc_never_true.hpp \
+  /usr/local/include/boost/mpl/aux_/msvc_type.hpp \
+  /usr/local/include/boost/mpl/aux_/na.hpp \
+  /usr/local/include/boost/mpl/aux_/na_assert.hpp \
+  /usr/local/include/boost/mpl/aux_/na_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/na_spec.hpp \
+  /usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp \
+  /usr/local/include/boost/mpl/aux_/nttp_decl.hpp \
+  /usr/local/include/boost/mpl/aux_/numeric_cast_utils.hpp \
+  /usr/local/include/boost/mpl/aux_/numeric_op.hpp \
+  /usr/local/include/boost/mpl/aux_/overload_names.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/advance_backward.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/less.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/minus.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/reverse_iter_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessor/default_params.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessor/enum.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessor/params.hpp \
+  /usr/local/include/boost/mpl/aux_/ptr_to_ref.hpp \
+  /usr/local/include/boost/mpl/aux_/push_back_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/push_front_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/reverse_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/reverse_iter_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/size_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/static_cast.hpp \
+  /usr/local/include/boost/mpl/aux_/template_arity.hpp \
+  /usr/local/include/boost/mpl/aux_/template_arity_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/traits_lambda_spec.hpp \
+  /usr/local/include/boost/mpl/aux_/type_wrapper.hpp \
+  /usr/local/include/boost/mpl/aux_/value_wknd.hpp \
+  /usr/local/include/boost/mpl/aux_/yes_no.hpp \
+  /usr/local/include/boost/mpl/back_fwd.hpp \
+  /usr/local/include/boost/mpl/back_inserter.hpp \
+  /usr/local/include/boost/mpl/base.hpp \
+  /usr/local/include/boost/mpl/begin_end.hpp \
+  /usr/local/include/boost/mpl/begin_end_fwd.hpp \
+  /usr/local/include/boost/mpl/bind.hpp \
+  /usr/local/include/boost/mpl/bind_fwd.hpp \
+  /usr/local/include/boost/mpl/bool.hpp \
+  /usr/local/include/boost/mpl/bool_fwd.hpp \
+  /usr/local/include/boost/mpl/clear.hpp \
+  /usr/local/include/boost/mpl/clear_fwd.hpp \
+  /usr/local/include/boost/mpl/contains.hpp \
+  /usr/local/include/boost/mpl/contains_fwd.hpp \
+  /usr/local/include/boost/mpl/deref.hpp \
+  /usr/local/include/boost/mpl/distance.hpp \
+  /usr/local/include/boost/mpl/distance_fwd.hpp \
+  /usr/local/include/boost/mpl/empty.hpp \
+  /usr/local/include/boost/mpl/empty_fwd.hpp \
+  /usr/local/include/boost/mpl/erase_fwd.hpp \
+  /usr/local/include/boost/mpl/erase_key_fwd.hpp \
+  /usr/local/include/boost/mpl/eval_if.hpp \
+  /usr/local/include/boost/mpl/find.hpp \
+  /usr/local/include/boost/mpl/find_if.hpp \
+  /usr/local/include/boost/mpl/fold.hpp \
+  /usr/local/include/boost/mpl/front_fwd.hpp \
+  /usr/local/include/boost/mpl/front_inserter.hpp \
+  /usr/local/include/boost/mpl/has_key.hpp \
+  /usr/local/include/boost/mpl/has_key_fwd.hpp \
+  /usr/local/include/boost/mpl/has_xxx.hpp \
+  /usr/local/include/boost/mpl/identity.hpp \
+  /usr/local/include/boost/mpl/if.hpp \
+  /usr/local/include/boost/mpl/insert.hpp \
+  /usr/local/include/boost/mpl/insert_fwd.hpp \
+  /usr/local/include/boost/mpl/insert_range_fwd.hpp \
+  /usr/local/include/boost/mpl/inserter.hpp \
+  /usr/local/include/boost/mpl/int.hpp \
+  /usr/local/include/boost/mpl/int_fwd.hpp \
+  /usr/local/include/boost/mpl/integral_c.hpp \
+  /usr/local/include/boost/mpl/integral_c_fwd.hpp \
+  /usr/local/include/boost/mpl/integral_c_tag.hpp \
+  /usr/local/include/boost/mpl/is_sequence.hpp \
+  /usr/local/include/boost/mpl/iter_fold.hpp \
+  /usr/local/include/boost/mpl/iter_fold_if.hpp \
+  /usr/local/include/boost/mpl/iterator_category.hpp \
+  /usr/local/include/boost/mpl/iterator_range.hpp \
+  /usr/local/include/boost/mpl/iterator_tags.hpp \
+  /usr/local/include/boost/mpl/key_type_fwd.hpp \
+  /usr/local/include/boost/mpl/lambda.hpp \
+  /usr/local/include/boost/mpl/lambda_fwd.hpp \
+  /usr/local/include/boost/mpl/less.hpp \
+  /usr/local/include/boost/mpl/limits/arity.hpp \
+  /usr/local/include/boost/mpl/limits/vector.hpp \
+  /usr/local/include/boost/mpl/logical.hpp \
+  /usr/local/include/boost/mpl/long.hpp \
+  /usr/local/include/boost/mpl/long_fwd.hpp \
+  /usr/local/include/boost/mpl/min_max.hpp \
+  /usr/local/include/boost/mpl/minus.hpp \
+  /usr/local/include/boost/mpl/negate.hpp \
+  /usr/local/include/boost/mpl/next.hpp \
+  /usr/local/include/boost/mpl/next_prior.hpp \
+  /usr/local/include/boost/mpl/not.hpp \
+  /usr/local/include/boost/mpl/numeric_cast.hpp \
+  /usr/local/include/boost/mpl/or.hpp \
+  /usr/local/include/boost/mpl/pair.hpp \
+  /usr/local/include/boost/mpl/pair_view.hpp \
+  /usr/local/include/boost/mpl/placeholders.hpp \
+  /usr/local/include/boost/mpl/plus.hpp \
+  /usr/local/include/boost/mpl/pop_back_fwd.hpp \
+  /usr/local/include/boost/mpl/pop_front_fwd.hpp \
+  /usr/local/include/boost/mpl/prior.hpp \
+  /usr/local/include/boost/mpl/protect.hpp \
+  /usr/local/include/boost/mpl/push_back.hpp \
+  /usr/local/include/boost/mpl/push_back_fwd.hpp \
+  /usr/local/include/boost/mpl/push_front.hpp \
+  /usr/local/include/boost/mpl/push_front_fwd.hpp \
+  /usr/local/include/boost/mpl/quote.hpp \
+  /usr/local/include/boost/mpl/reverse_fold.hpp \
+  /usr/local/include/boost/mpl/reverse_iter_fold.hpp \
+  /usr/local/include/boost/mpl/same_as.hpp \
+  /usr/local/include/boost/mpl/sequence_tag.hpp \
+  /usr/local/include/boost/mpl/sequence_tag_fwd.hpp \
+  /usr/local/include/boost/mpl/set/aux_/at_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/begin_end_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/clear_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/empty_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/erase_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/erase_key_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/has_key_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/insert_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/insert_range_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/item.hpp \
+  /usr/local/include/boost/mpl/set/aux_/iterator.hpp \
+  /usr/local/include/boost/mpl/set/aux_/key_type_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/set0.hpp \
+  /usr/local/include/boost/mpl/set/aux_/size_impl.hpp \
+  /usr/local/include/boost/mpl/set/aux_/tag.hpp \
+  /usr/local/include/boost/mpl/set/aux_/value_type_impl.hpp \
+  /usr/local/include/boost/mpl/set/set0.hpp \
+  /usr/local/include/boost/mpl/size.hpp \
+  /usr/local/include/boost/mpl/size_fwd.hpp \
+  /usr/local/include/boost/mpl/tag.hpp \
+  /usr/local/include/boost/mpl/transform.hpp \
+  /usr/local/include/boost/mpl/value_type_fwd.hpp \
+  /usr/local/include/boost/mpl/vector.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/O1_size.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/at.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/back.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/begin_end.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/clear.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/empty.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/front.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/include_preprocessed.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/item.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/iterator.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/pop_back.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/pop_front.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector10.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector20.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/push_back.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/push_front.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/size.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/tag.hpp \
+  /usr/local/include/boost/mpl/vector/aux_/vector0.hpp \
+  /usr/local/include/boost/mpl/vector/vector0.hpp \
+  /usr/local/include/boost/mpl/vector/vector10.hpp \
+  /usr/local/include/boost/mpl/vector/vector20.hpp \
+  /usr/local/include/boost/mpl/void.hpp \
+  /usr/local/include/boost/mpl/void_fwd.hpp \
+  /usr/local/include/boost/multi_index/detail/access_specifier.hpp \
+  /usr/local/include/boost/multi_index/detail/adl_swap.hpp \
+  /usr/local/include/boost/multi_index/detail/allocator_traits.hpp \
+  /usr/local/include/boost/multi_index/detail/archive_constructed.hpp \
+  /usr/local/include/boost/multi_index/detail/auto_space.hpp \
+  /usr/local/include/boost/multi_index/detail/bad_archive_exception.hpp \
+  /usr/local/include/boost/multi_index/detail/base_type.hpp \
+  /usr/local/include/boost/multi_index/detail/bidir_node_iterator.hpp \
+  /usr/local/include/boost/multi_index/detail/converter.hpp \
+  /usr/local/include/boost/multi_index/detail/copy_map.hpp \
+  /usr/local/include/boost/multi_index/detail/define_if_constexpr_macro.hpp \
+  /usr/local/include/boost/multi_index/detail/do_not_copy_elements_tag.hpp \
+  /usr/local/include/boost/multi_index/detail/duplicates_iterator.hpp \
+  /usr/local/include/boost/multi_index/detail/has_tag.hpp \
+  /usr/local/include/boost/multi_index/detail/header_holder.hpp \
+  /usr/local/include/boost/multi_index/detail/ignore_wstrict_aliasing.hpp \
+  /usr/local/include/boost/multi_index/detail/index_access_sequence.hpp \
+  /usr/local/include/boost/multi_index/detail/index_base.hpp \
+  /usr/local/include/boost/multi_index/detail/index_loader.hpp \
+  /usr/local/include/boost/multi_index/detail/index_matcher.hpp \
+  /usr/local/include/boost/multi_index/detail/index_node_base.hpp \
+  /usr/local/include/boost/multi_index/detail/index_saver.hpp \
+  /usr/local/include/boost/multi_index/detail/invalidate_iterators.hpp \
+  /usr/local/include/boost/multi_index/detail/is_index_list.hpp \
+  /usr/local/include/boost/multi_index/detail/is_transparent.hpp \
+  /usr/local/include/boost/multi_index/detail/modify_key_adaptor.hpp \
+  /usr/local/include/boost/multi_index/detail/no_duplicate_tags.hpp \
+  /usr/local/include/boost/multi_index/detail/node_handle.hpp \
+  /usr/local/include/boost/multi_index/detail/node_type.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_args.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_impl.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_impl_fwd.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_node.hpp \
+  /usr/local/include/boost/multi_index/detail/ord_index_ops.hpp \
+  /usr/local/include/boost/multi_index/detail/promotes_arg.hpp \
+  /usr/local/include/boost/multi_index/detail/raw_ptr.hpp \
+  /usr/local/include/boost/multi_index/detail/restore_wstrict_aliasing.hpp \
+  /usr/local/include/boost/multi_index/detail/safe_mode.hpp \
+  /usr/local/include/boost/multi_index/detail/scope_guard.hpp \
+  /usr/local/include/boost/multi_index/detail/seq_index_node.hpp \
+  /usr/local/include/boost/multi_index/detail/seq_index_ops.hpp \
+  /usr/local/include/boost/multi_index/detail/serialization_version.hpp \
+  /usr/local/include/boost/multi_index/detail/uintptr_type.hpp \
+  /usr/local/include/boost/multi_index/detail/unbounded.hpp \
+  /usr/local/include/boost/multi_index/detail/undef_if_constexpr_macro.hpp \
+  /usr/local/include/boost/multi_index/detail/value_compare.hpp \
+  /usr/local/include/boost/multi_index/detail/vartempl_support.hpp \
+  /usr/local/include/boost/multi_index/identity.hpp \
+  /usr/local/include/boost/multi_index/identity_fwd.hpp \
+  /usr/local/include/boost/multi_index/indexed_by.hpp \
+  /usr/local/include/boost/multi_index/member.hpp \
+  /usr/local/include/boost/multi_index/ordered_index.hpp \
+  /usr/local/include/boost/multi_index/ordered_index_fwd.hpp \
+  /usr/local/include/boost/multi_index/sequenced_index.hpp \
+  /usr/local/include/boost/multi_index/sequenced_index_fwd.hpp \
+  /usr/local/include/boost/multi_index/tag.hpp \
+  /usr/local/include/boost/multi_index_container.hpp \
+  /usr/local/include/boost/multi_index_container_fwd.hpp \
+  /usr/local/include/boost/none.hpp \
+  /usr/local/include/boost/none_t.hpp \
+  /usr/local/include/boost/operators.hpp \
+  /usr/local/include/boost/optional/bad_optional_access.hpp \
+  /usr/local/include/boost/optional/detail/optional_aligned_storage.hpp \
+  /usr/local/include/boost/optional/detail/optional_config.hpp \
+  /usr/local/include/boost/optional/detail/optional_factory_support.hpp \
+  /usr/local/include/boost/optional/detail/optional_hash.hpp \
+  /usr/local/include/boost/optional/detail/optional_reference_spec.hpp \
+  /usr/local/include/boost/optional/detail/optional_relops.hpp \
+  /usr/local/include/boost/optional/detail/optional_swap.hpp \
+  /usr/local/include/boost/optional/detail/optional_trivially_copyable_base.hpp \
+  /usr/local/include/boost/optional/detail/optional_utility.hpp \
+  /usr/local/include/boost/optional/optional.hpp \
+  /usr/local/include/boost/optional/optional_fwd.hpp \
+  /usr/local/include/boost/optional/optional_io.hpp \
+  /usr/local/include/boost/preprocessor/arithmetic/add.hpp \
+  /usr/local/include/boost/preprocessor/arithmetic/dec.hpp \
+  /usr/local/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
+  /usr/local/include/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp \
+  /usr/local/include/boost/preprocessor/arithmetic/detail/maximum_number.hpp \
+  /usr/local/include/boost/preprocessor/arithmetic/inc.hpp \
+  /usr/local/include/boost/preprocessor/arithmetic/limits/dec_256.hpp \
+  /usr/local/include/boost/preprocessor/arithmetic/limits/inc_256.hpp \
+  /usr/local/include/boost/preprocessor/arithmetic/sub.hpp \
+  /usr/local/include/boost/preprocessor/array/data.hpp \
+  /usr/local/include/boost/preprocessor/array/elem.hpp \
+  /usr/local/include/boost/preprocessor/array/size.hpp \
+  /usr/local/include/boost/preprocessor/cat.hpp \
+  /usr/local/include/boost/preprocessor/comma_if.hpp \
+  /usr/local/include/boost/preprocessor/comparison/equal.hpp \
+  /usr/local/include/boost/preprocessor/comparison/limits/not_equal_256.hpp \
+  /usr/local/include/boost/preprocessor/comparison/not_equal.hpp \
+  /usr/local/include/boost/preprocessor/config/config.hpp \
+  /usr/local/include/boost/preprocessor/config/limits.hpp \
+  /usr/local/include/boost/preprocessor/control/detail/limits/while_256.hpp \
+  /usr/local/include/boost/preprocessor/control/detail/while.hpp \
+  /usr/local/include/boost/preprocessor/control/expr_if.hpp \
+  /usr/local/include/boost/preprocessor/control/expr_iif.hpp \
+  /usr/local/include/boost/preprocessor/control/if.hpp \
+  /usr/local/include/boost/preprocessor/control/iif.hpp \
+  /usr/local/include/boost/preprocessor/control/limits/while_256.hpp \
+  /usr/local/include/boost/preprocessor/control/while.hpp \
+  /usr/local/include/boost/preprocessor/debug/error.hpp \
+  /usr/local/include/boost/preprocessor/detail/auto_rec.hpp \
+  /usr/local/include/boost/preprocessor/detail/check.hpp \
+  /usr/local/include/boost/preprocessor/detail/is_binary.hpp \
+  /usr/local/include/boost/preprocessor/detail/limits/auto_rec_256.hpp \
+  /usr/local/include/boost/preprocessor/empty.hpp \
+  /usr/local/include/boost/preprocessor/facilities/check_empty.hpp \
+  /usr/local/include/boost/preprocessor/facilities/empty.hpp \
+  /usr/local/include/boost/preprocessor/facilities/expand.hpp \
+  /usr/local/include/boost/preprocessor/facilities/identity.hpp \
+  /usr/local/include/boost/preprocessor/facilities/intercept.hpp \
+  /usr/local/include/boost/preprocessor/facilities/limits/intercept_256.hpp \
+  /usr/local/include/boost/preprocessor/facilities/overload.hpp \
+  /usr/local/include/boost/preprocessor/identity.hpp \
+  /usr/local/include/boost/preprocessor/inc.hpp \
+  /usr/local/include/boost/preprocessor/list/adt.hpp \
+  /usr/local/include/boost/preprocessor/list/detail/fold_left.hpp \
+  /usr/local/include/boost/preprocessor/list/detail/fold_right.hpp \
+  /usr/local/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp \
+  /usr/local/include/boost/preprocessor/list/detail/limits/fold_right_256.hpp \
+  /usr/local/include/boost/preprocessor/list/fold_left.hpp \
+  /usr/local/include/boost/preprocessor/list/fold_right.hpp \
+  /usr/local/include/boost/preprocessor/list/limits/fold_left_256.hpp \
+  /usr/local/include/boost/preprocessor/list/reverse.hpp \
+  /usr/local/include/boost/preprocessor/logical/and.hpp \
+  /usr/local/include/boost/preprocessor/logical/bitand.hpp \
+  /usr/local/include/boost/preprocessor/logical/bitor.hpp \
+  /usr/local/include/boost/preprocessor/logical/bool.hpp \
+  /usr/local/include/boost/preprocessor/logical/compl.hpp \
+  /usr/local/include/boost/preprocessor/logical/limits/bool_256.hpp \
+  /usr/local/include/boost/preprocessor/logical/not.hpp \
+  /usr/local/include/boost/preprocessor/punctuation/comma.hpp \
+  /usr/local/include/boost/preprocessor/punctuation/comma_if.hpp \
+  /usr/local/include/boost/preprocessor/repeat.hpp \
+  /usr/local/include/boost/preprocessor/repetition/enum.hpp \
+  /usr/local/include/boost/preprocessor/repetition/enum_binary_params.hpp \
+  /usr/local/include/boost/preprocessor/repetition/enum_params.hpp \
+  /usr/local/include/boost/preprocessor/repetition/enum_trailing_params.hpp \
+  /usr/local/include/boost/preprocessor/repetition/limits/repeat_256.hpp \
+  /usr/local/include/boost/preprocessor/repetition/repeat.hpp \
+  /usr/local/include/boost/preprocessor/repetition/repeat_from_to.hpp \
+  /usr/local/include/boost/preprocessor/stringize.hpp \
+  /usr/local/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
+  /usr/local/include/boost/preprocessor/tuple/eat.hpp \
+  /usr/local/include/boost/preprocessor/tuple/elem.hpp \
+  /usr/local/include/boost/preprocessor/tuple/rem.hpp \
+  /usr/local/include/boost/preprocessor/variadic/elem.hpp \
+  /usr/local/include/boost/preprocessor/variadic/has_opt.hpp \
+  /usr/local/include/boost/preprocessor/variadic/limits/elem_64.hpp \
+  /usr/local/include/boost/preprocessor/variadic/limits/size_64.hpp \
+  /usr/local/include/boost/preprocessor/variadic/size.hpp \
+  /usr/local/include/boost/property_tree/detail/exception_implementation.hpp \
+  /usr/local/include/boost/property_tree/detail/file_parser_error.hpp \
+  /usr/local/include/boost/property_tree/detail/ptree_implementation.hpp \
+  /usr/local/include/boost/property_tree/detail/ptree_utils.hpp \
+  /usr/local/include/boost/property_tree/exceptions.hpp \
+  /usr/local/include/boost/property_tree/id_translator.hpp \
+  /usr/local/include/boost/property_tree/ini_parser.hpp \
+  /usr/local/include/boost/property_tree/ptree.hpp \
+  /usr/local/include/boost/property_tree/ptree_fwd.hpp \
+  /usr/local/include/boost/property_tree/stream_translator.hpp \
+  /usr/local/include/boost/property_tree/string_path.hpp \
+  /usr/local/include/boost/smart_ptr/detail/atomic_count.hpp \
+  /usr/local/include/boost/smart_ptr/detail/atomic_count_gcc_atomic.hpp \
+  /usr/local/include/boost/smart_ptr/detail/deprecated_macros.hpp \
+  /usr/local/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /usr/local/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  /usr/local/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  /usr/local/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /usr/local/include/boost/smart_ptr/intrusive_ptr.hpp \
+  /usr/local/include/boost/smart_ptr/intrusive_ref_counter.hpp \
+  /usr/local/include/boost/static_assert.hpp \
+  /usr/local/include/boost/system/api_config.hpp \
+  /usr/local/include/boost/system/detail/append_int.hpp \
+  /usr/local/include/boost/system/detail/cerrno.hpp \
+  /usr/local/include/boost/system/detail/config.hpp \
+  /usr/local/include/boost/system/detail/enable_if.hpp \
+  /usr/local/include/boost/system/detail/errc.hpp \
+  /usr/local/include/boost/system/detail/error_category.hpp \
+  /usr/local/include/boost/system/detail/error_category_impl.hpp \
+  /usr/local/include/boost/system/detail/error_code.hpp \
+  /usr/local/include/boost/system/detail/error_condition.hpp \
+  /usr/local/include/boost/system/detail/generic_category.hpp \
+  /usr/local/include/boost/system/detail/generic_category_message.hpp \
+  /usr/local/include/boost/system/detail/interop_category.hpp \
+  /usr/local/include/boost/system/detail/is_same.hpp \
+  /usr/local/include/boost/system/detail/mutex.hpp \
+  /usr/local/include/boost/system/detail/snprintf.hpp \
+  /usr/local/include/boost/system/detail/std_category.hpp \
+  /usr/local/include/boost/system/detail/std_category_impl.hpp \
+  /usr/local/include/boost/system/detail/system_category.hpp \
+  /usr/local/include/boost/system/detail/system_category_impl.hpp \
+  /usr/local/include/boost/system/detail/system_category_message.hpp \
+  /usr/local/include/boost/system/detail/throws.hpp \
+  /usr/local/include/boost/system/errc.hpp \
+  /usr/local/include/boost/system/error_category.hpp \
+  /usr/local/include/boost/system/error_code.hpp \
+  /usr/local/include/boost/system/error_condition.hpp \
+  /usr/local/include/boost/system/generic_category.hpp \
+  /usr/local/include/boost/system/is_error_code_enum.hpp \
+  /usr/local/include/boost/system/is_error_condition_enum.hpp \
+  /usr/local/include/boost/system/system_category.hpp \
+  /usr/local/include/boost/system/system_error.hpp \
+  /usr/local/include/boost/throw_exception.hpp \
+  /usr/local/include/boost/tuple/detail/tuple_basic.hpp \
+  /usr/local/include/boost/tuple/tuple.hpp \
+  /usr/local/include/boost/type.hpp \
+  /usr/local/include/boost/type_index.hpp \
+  /usr/local/include/boost/type_index/stl_type_index.hpp \
+  /usr/local/include/boost/type_index/type_index_facade.hpp \
+  /usr/local/include/boost/type_traits/add_const.hpp \
+  /usr/local/include/boost/type_traits/add_cv.hpp \
+  /usr/local/include/boost/type_traits/add_lvalue_reference.hpp \
+  /usr/local/include/boost/type_traits/add_pointer.hpp \
+  /usr/local/include/boost/type_traits/add_reference.hpp \
+  /usr/local/include/boost/type_traits/add_rvalue_reference.hpp \
+  /usr/local/include/boost/type_traits/add_volatile.hpp \
+  /usr/local/include/boost/type_traits/aligned_storage.hpp \
+  /usr/local/include/boost/type_traits/alignment_of.hpp \
+  /usr/local/include/boost/type_traits/conditional.hpp \
+  /usr/local/include/boost/type_traits/conjunction.hpp \
+  /usr/local/include/boost/type_traits/cv_traits.hpp \
+  /usr/local/include/boost/type_traits/decay.hpp \
+  /usr/local/include/boost/type_traits/declval.hpp \
+  /usr/local/include/boost/type_traits/detail/config.hpp \
+  /usr/local/include/boost/type_traits/detail/is_function_cxx_11.hpp \
+  /usr/local/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
+  /usr/local/include/boost/type_traits/detail/yes_no_type.hpp \
+  /usr/local/include/boost/type_traits/disjunction.hpp \
+  /usr/local/include/boost/type_traits/enable_if.hpp \
+  /usr/local/include/boost/type_traits/function_traits.hpp \
+  /usr/local/include/boost/type_traits/has_nothrow_assign.hpp \
+  /usr/local/include/boost/type_traits/has_nothrow_constructor.hpp \
+  /usr/local/include/boost/type_traits/has_trivial_move_assign.hpp \
+  /usr/local/include/boost/type_traits/integral_constant.hpp \
+  /usr/local/include/boost/type_traits/intrinsics.hpp \
+  /usr/local/include/boost/type_traits/is_abstract.hpp \
+  /usr/local/include/boost/type_traits/is_arithmetic.hpp \
+  /usr/local/include/boost/type_traits/is_array.hpp \
+  /usr/local/include/boost/type_traits/is_assignable.hpp \
+  /usr/local/include/boost/type_traits/is_base_and_derived.hpp \
+  /usr/local/include/boost/type_traits/is_base_of.hpp \
+  /usr/local/include/boost/type_traits/is_class.hpp \
+  /usr/local/include/boost/type_traits/is_complete.hpp \
+  /usr/local/include/boost/type_traits/is_const.hpp \
+  /usr/local/include/boost/type_traits/is_constructible.hpp \
+  /usr/local/include/boost/type_traits/is_convertible.hpp \
+  /usr/local/include/boost/type_traits/is_copy_constructible.hpp \
+  /usr/local/include/boost/type_traits/is_default_constructible.hpp \
+  /usr/local/include/boost/type_traits/is_destructible.hpp \
+  /usr/local/include/boost/type_traits/is_empty.hpp \
+  /usr/local/include/boost/type_traits/is_enum.hpp \
+  /usr/local/include/boost/type_traits/is_final.hpp \
+  /usr/local/include/boost/type_traits/is_floating_point.hpp \
+  /usr/local/include/boost/type_traits/is_function.hpp \
+  /usr/local/include/boost/type_traits/is_integral.hpp \
+  /usr/local/include/boost/type_traits/is_lvalue_reference.hpp \
+  /usr/local/include/boost/type_traits/is_member_function_pointer.hpp \
+  /usr/local/include/boost/type_traits/is_member_pointer.hpp \
+  /usr/local/include/boost/type_traits/is_nothrow_move_assignable.hpp \
+  /usr/local/include/boost/type_traits/is_nothrow_move_constructible.hpp \
+  /usr/local/include/boost/type_traits/is_pod.hpp \
+  /usr/local/include/boost/type_traits/is_pointer.hpp \
+  /usr/local/include/boost/type_traits/is_reference.hpp \
+  /usr/local/include/boost/type_traits/is_rvalue_reference.hpp \
+  /usr/local/include/boost/type_traits/is_same.hpp \
+  /usr/local/include/boost/type_traits/is_scalar.hpp \
+  /usr/local/include/boost/type_traits/is_void.hpp \
+  /usr/local/include/boost/type_traits/is_volatile.hpp \
+  /usr/local/include/boost/type_traits/remove_bounds.hpp \
+  /usr/local/include/boost/type_traits/remove_const.hpp \
+  /usr/local/include/boost/type_traits/remove_cv.hpp \
+  /usr/local/include/boost/type_traits/remove_extent.hpp \
+  /usr/local/include/boost/type_traits/remove_pointer.hpp \
+  /usr/local/include/boost/type_traits/remove_reference.hpp \
+  /usr/local/include/boost/type_traits/remove_volatile.hpp \
+  /usr/local/include/boost/type_traits/type_identity.hpp \
+  /usr/local/include/boost/type_traits/type_with_alignment.hpp \
+  /usr/local/include/boost/utility/base_from_member.hpp \
+  /usr/local/include/boost/utility/enable_if.hpp \
+  /usr/local/include/boost/version.hpp \
+  /usr/local/include/boost/visit_each.hpp
+
+CMakeFiles/GateServer.dir/MysqlMgr.cc.o: /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.cc \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.h \
+  /home/lunisolar/cpp/LCServer/GateServer/singleton.h \
+  /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/c++/9/array \
+  /usr/include/c++/9/atomic \
+  /usr/include/c++/9/backward/auto_ptr.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
+  /usr/include/c++/9/bits/allocated_ptr.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/c++/9/bits/atomic_base.h \
+  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/9/bits/basic_ios.h \
+  /usr/include/c++/9/bits/basic_ios.tcc \
+  /usr/include/c++/9/bits/basic_string.h \
+  /usr/include/c++/9/bits/basic_string.tcc \
+  /usr/include/c++/9/bits/char_traits.h \
+  /usr/include/c++/9/bits/concept_check.h \
+  /usr/include/c++/9/bits/cpp_type_traits.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/bits/deque.tcc \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_defines.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/functexcept.h \
+  /usr/include/c++/9/bits/functional_hash.h \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/invoke.h \
+  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/locale_classes.h \
+  /usr/include/c++/9/bits/locale_classes.tcc \
+  /usr/include/c++/9/bits/locale_facets.h \
+  /usr/include/c++/9/bits/locale_facets.tcc \
+  /usr/include/c++/9/bits/localefwd.h \
+  /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/move.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/bits/ostream.tcc \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/parse_numbers.h \
+  /usr/include/c++/9/bits/postypes.h \
+  /usr/include/c++/9/bits/predefined_ops.h \
+  /usr/include/c++/9/bits/ptr_traits.h \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/refwrap.h \
+  /usr/include/c++/9/bits/shared_ptr.h \
+  /usr/include/c++/9/bits/shared_ptr_atomic.h \
+  /usr/include/c++/9/bits/shared_ptr_base.h \
+  /usr/include/c++/9/bits/std_abs.h \
+  /usr/include/c++/9/bits/std_mutex.h \
+  /usr/include/c++/9/bits/stl_algobase.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_deque.h \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/bits/stl_heap.h \
+  /usr/include/c++/9/bits/stl_iterator.h \
+  /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_queue.h \
+  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/9/bits/stl_relops.h \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/streambuf.tcc \
+  /usr/include/c++/9/bits/streambuf_iterator.h \
+  /usr/include/c++/9/bits/string_view.tcc \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/unique_lock.h \
+  /usr/include/c++/9/bits/unique_ptr.h \
+  /usr/include/c++/9/bits/uses_allocator.h \
+  /usr/include/c++/9/bits/vector.tcc \
+  /usr/include/c++/9/cctype \
+  /usr/include/c++/9/cerrno \
+  /usr/include/c++/9/chrono \
+  /usr/include/c++/9/clocale \
+  /usr/include/c++/9/condition_variable \
+  /usr/include/c++/9/cstdint \
+  /usr/include/c++/9/cstdio \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/c++/9/ctime \
+  /usr/include/c++/9/cwchar \
+  /usr/include/c++/9/cwctype \
+  /usr/include/c++/9/debug/assertions.h \
+  /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/deque \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/ext/aligned_buffer.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/ext/atomicity.h \
+  /usr/include/c++/9/ext/concurrence.h \
+  /usr/include/c++/9/ext/new_allocator.h \
+  /usr/include/c++/9/ext/numeric_traits.h \
+  /usr/include/c++/9/ext/string_conversions.h \
+  /usr/include/c++/9/ext/type_traits.h \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/ios \
+  /usr/include/c++/9/iosfwd \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/istream \
+  /usr/include/c++/9/limits \
+  /usr/include/c++/9/memory \
+  /usr/include/c++/9/mutex \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/ostream \
+  /usr/include/c++/9/pstl/execution_defs.h \
+  /usr/include/c++/9/pstl/glue_memory_defs.h \
+  /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/queue \
+  /usr/include/c++/9/ratio \
+  /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/stdlib.h \
+  /usr/include/c++/9/streambuf \
+  /usr/include/c++/9/string \
+  /usr/include/c++/9/string_view \
+  /usr/include/c++/9/system_error \
+  /usr/include/c++/9/tuple \
+  /usr/include/c++/9/type_traits \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/utility \
+  /usr/include/c++/9/vector \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
+  /usr/include/mysql/client_plugin.h \
+  /usr/include/mysql/errmsg.h \
+  /usr/include/mysql/field_types.h \
+  /usr/include/mysql/my_command.h \
+  /usr/include/mysql/my_compress.h \
+  /usr/include/mysql/my_list.h \
+  /usr/include/mysql/mysql.h \
+  /usr/include/mysql/mysql_com.h \
+  /usr/include/mysql/mysql_time.h \
+  /usr/include/mysql/mysql_version.h \
+  /usr/include/mysql/plugin_auth_common.h \
+  /usr/include/mysql/udf_registration_types.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h
 
 CMakeFiles/GateServer.dir/VarifyGrpcClient.cc.o: /home/lunisolar/cpp/LCServer/GateServer/VarifyGrpcClient.cc \
   /usr/include/stdc-predef.h
 
 CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/main.cc \
   /home/lunisolar/cpp/LCServer/GateServer/CServer.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlDao.h \
+  /home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.h \
   /home/lunisolar/cpp/LCServer/GateServer/const.h \
+  /home/lunisolar/cpp/LCServer/GateServer/redispool.h \
+  /home/lunisolar/cpp/LCServer/GateServer/singleton.h \
+  /home/lunisolar/cpp/LCServer/GateServer/snowflake.h \
+  /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -7491,6 +9224,7 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/c++/9/bits/cpp_type_traits.h \
   /usr/include/c++/9/bits/cxxabi_forced.h \
   /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/bits/deque.tcc \
   /usr/include/c++/9/bits/enable_special_members.h \
   /usr/include/c++/9/bits/erase_if.h \
   /usr/include/c++/9/bits/exception.h \
@@ -7513,6 +9247,7 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/c++/9/bits/invoke.h \
   /usr/include/c++/9/bits/ios_base.h \
   /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/list.tcc \
   /usr/include/c++/9/bits/locale_classes.h \
   /usr/include/c++/9/bits/locale_classes.tcc \
   /usr/include/c++/9/bits/locale_conv.h \
@@ -7533,6 +9268,8 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/c++/9/bits/predefined_ops.h \
   /usr/include/c++/9/bits/ptr_traits.h \
   /usr/include/c++/9/bits/quoted_string.h \
+  /usr/include/c++/9/bits/random.h \
+  /usr/include/c++/9/bits/random.tcc \
   /usr/include/c++/9/bits/range_access.h \
   /usr/include/c++/9/bits/refwrap.h \
   /usr/include/c++/9/bits/shared_ptr.h \
@@ -7548,15 +9285,18 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/c++/9/bits/stl_algobase.h \
   /usr/include/c++/9/bits/stl_bvector.h \
   /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_deque.h \
   /usr/include/c++/9/bits/stl_function.h \
   /usr/include/c++/9/bits/stl_heap.h \
   /usr/include/c++/9/bits/stl_iterator.h \
   /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_list.h \
   /usr/include/c++/9/bits/stl_map.h \
   /usr/include/c++/9/bits/stl_multimap.h \
   /usr/include/c++/9/bits/stl_numeric.h \
   /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_queue.h \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/bits/stl_relops.h \
   /usr/include/c++/9/bits/stl_tempbuf.h \
@@ -7572,6 +9312,7 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/c++/9/bits/unique_lock.h \
   /usr/include/c++/9/bits/unique_ptr.h \
   /usr/include/c++/9/bits/unordered_map.h \
+  /usr/include/c++/9/bits/unordered_set.h \
   /usr/include/c++/9/bits/uses_allocator.h \
   /usr/include/c++/9/bits/valarray_after.h \
   /usr/include/c++/9/bits/valarray_array.h \
@@ -7599,6 +9340,7 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/c++/9/cwctype \
   /usr/include/c++/9/debug/assertions.h \
   /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/deque \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/ext/aligned_buffer.h \
   /usr/include/c++/9/ext/alloc_traits.h \
@@ -7620,6 +9362,7 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/c++/9/istream \
   /usr/include/c++/9/iterator \
   /usr/include/c++/9/limits \
+  /usr/include/c++/9/list \
   /usr/include/c++/9/locale \
   /usr/include/c++/9/map \
   /usr/include/c++/9/memory \
@@ -7633,9 +9376,12 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/c++/9/pstl/glue_memory_defs.h \
   /usr/include/c++/9/pstl/glue_numeric_defs.h \
   /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/queue \
+  /usr/include/c++/9/random \
   /usr/include/c++/9/ratio \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/stdlib.h \
   /usr/include/c++/9/streambuf \
   /usr/include/c++/9/string \
   /usr/include/c++/9/string_view \
@@ -7658,6 +9404,7 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/c++/9/typeindex \
   /usr/include/c++/9/typeinfo \
   /usr/include/c++/9/unordered_map \
+  /usr/include/c++/9/unordered_set \
   /usr/include/c++/9/utility \
   /usr/include/c++/9/valarray \
   /usr/include/c++/9/variant \
@@ -7681,6 +9428,18 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/linux/version.h \
   /usr/include/locale.h \
   /usr/include/math.h \
+  /usr/include/mysql/client_plugin.h \
+  /usr/include/mysql/errmsg.h \
+  /usr/include/mysql/field_types.h \
+  /usr/include/mysql/my_command.h \
+  /usr/include/mysql/my_compress.h \
+  /usr/include/mysql/my_list.h \
+  /usr/include/mysql/mysql.h \
+  /usr/include/mysql/mysql_com.h \
+  /usr/include/mysql/mysql_time.h \
+  /usr/include/mysql/mysql_version.h \
+  /usr/include/mysql/plugin_auth_common.h \
+  /usr/include/mysql/udf_registration_types.h \
   /usr/include/net/if.h \
   /usr/include/netdb.h \
   /usr/include/netinet/in.h \
@@ -7849,6 +9608,7 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -7870,6 +9630,7 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/include/x86_64-linux-gnu/sys/un.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -9095,6 +10856,10 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/local/include/boost/utility/string_view.hpp \
   /usr/local/include/boost/utility/string_view_fwd.hpp \
   /usr/local/include/boost/version.hpp \
+  /usr/local/include/hiredis/alloc.h \
+  /usr/local/include/hiredis/hiredis.h \
+  /usr/local/include/hiredis/read.h \
+  /usr/local/include/hiredis/sds.h \
   /usr/local/include/nlohmann/adl_serializer.hpp \
   /usr/local/include/nlohmann/byte_container_with_subtype.hpp \
   /usr/local/include/nlohmann/detail/abi_macros.hpp \
@@ -9140,7 +10905,32 @@ CMakeFiles/GateServer.dir/main.cc.o: /home/lunisolar/cpp/LCServer/GateServer/mai
   /usr/local/include/nlohmann/json_fwd.hpp \
   /usr/local/include/nlohmann/ordered_map.hpp \
   /usr/local/include/nlohmann/thirdparty/hedley/hedley.hpp \
-  /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+  /usr/local/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/local/include/sw/redis++/command.h \
+  /usr/local/include/sw/redis++/command_args.h \
+  /usr/local/include/sw/redis++/command_options.h \
+  /usr/local/include/sw/redis++/connection.h \
+  /usr/local/include/sw/redis++/connection_pool.h \
+  /usr/local/include/sw/redis++/cxx_utils.h \
+  /usr/local/include/sw/redis++/errors.h \
+  /usr/local/include/sw/redis++/hiredis_features.h \
+  /usr/local/include/sw/redis++/pipeline.h \
+  /usr/local/include/sw/redis++/queued_redis.h \
+  /usr/local/include/sw/redis++/queued_redis.hpp \
+  /usr/local/include/sw/redis++/redis++.h \
+  /usr/local/include/sw/redis++/redis.h \
+  /usr/local/include/sw/redis++/redis.hpp \
+  /usr/local/include/sw/redis++/redis_cluster.h \
+  /usr/local/include/sw/redis++/redis_cluster.hpp \
+  /usr/local/include/sw/redis++/redis_uri.h \
+  /usr/local/include/sw/redis++/reply.h \
+  /usr/local/include/sw/redis++/sentinel.h \
+  /usr/local/include/sw/redis++/shards.h \
+  /usr/local/include/sw/redis++/shards_pool.h \
+  /usr/local/include/sw/redis++/subscriber.h \
+  /usr/local/include/sw/redis++/tls.h \
+  /usr/local/include/sw/redis++/transaction.h \
+  /usr/local/include/sw/redis++/utils.h
 
 CMakeFiles/GateServer.dir/message.grpc.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServer/message.grpc.pb.cc \
   /home/lunisolar/cpp/LCServer/GateServer/message.grpc.pb.h \
@@ -10260,6 +12050,778 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
   /usr/local/include/google/protobuf/wire_format.h \
   /usr/local/include/google/protobuf/wire_format_lite.h
 
+CMakeFiles/GateServer.dir/redispool.cc.o: /home/lunisolar/cpp/LCServer/GateServer/redispool.cc \
+  /home/lunisolar/cpp/LCServer/GateServer/redispool.h \
+  /home/lunisolar/cpp/LCServer/GateServer/singleton.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/assert.h \
+  /usr/include/c++/9/array \
+  /usr/include/c++/9/backward/auto_ptr.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/bits/algorithmfwd.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
+  /usr/include/c++/9/bits/allocated_ptr.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/c++/9/bits/atomic_base.h \
+  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/9/bits/basic_ios.h \
+  /usr/include/c++/9/bits/basic_ios.tcc \
+  /usr/include/c++/9/bits/basic_string.h \
+  /usr/include/c++/9/bits/basic_string.tcc \
+  /usr/include/c++/9/bits/char_traits.h \
+  /usr/include/c++/9/bits/concept_check.h \
+  /usr/include/c++/9/bits/cpp_type_traits.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/bits/deque.tcc \
+  /usr/include/c++/9/bits/enable_special_members.h \
+  /usr/include/c++/9/bits/erase_if.h \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_defines.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/functexcept.h \
+  /usr/include/c++/9/bits/functional_hash.h \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/hashtable.h \
+  /usr/include/c++/9/bits/hashtable_policy.h \
+  /usr/include/c++/9/bits/invoke.h \
+  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/list.tcc \
+  /usr/include/c++/9/bits/locale_classes.h \
+  /usr/include/c++/9/bits/locale_classes.tcc \
+  /usr/include/c++/9/bits/locale_facets.h \
+  /usr/include/c++/9/bits/locale_facets.tcc \
+  /usr/include/c++/9/bits/localefwd.h \
+  /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/move.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/bits/node_handle.h \
+  /usr/include/c++/9/bits/ostream.tcc \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/parse_numbers.h \
+  /usr/include/c++/9/bits/postypes.h \
+  /usr/include/c++/9/bits/predefined_ops.h \
+  /usr/include/c++/9/bits/ptr_traits.h \
+  /usr/include/c++/9/bits/random.h \
+  /usr/include/c++/9/bits/random.tcc \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/refwrap.h \
+  /usr/include/c++/9/bits/shared_ptr.h \
+  /usr/include/c++/9/bits/shared_ptr_atomic.h \
+  /usr/include/c++/9/bits/shared_ptr_base.h \
+  /usr/include/c++/9/bits/specfun.h \
+  /usr/include/c++/9/bits/sstream.tcc \
+  /usr/include/c++/9/bits/std_abs.h \
+  /usr/include/c++/9/bits/std_function.h \
+  /usr/include/c++/9/bits/std_mutex.h \
+  /usr/include/c++/9/bits/stl_algo.h \
+  /usr/include/c++/9/bits/stl_algobase.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_deque.h \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/bits/stl_heap.h \
+  /usr/include/c++/9/bits/stl_iterator.h \
+  /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_list.h \
+  /usr/include/c++/9/bits/stl_map.h \
+  /usr/include/c++/9/bits/stl_multimap.h \
+  /usr/include/c++/9/bits/stl_numeric.h \
+  /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_queue.h \
+  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/9/bits/stl_relops.h \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_tree.h \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/stream_iterator.h \
+  /usr/include/c++/9/bits/streambuf.tcc \
+  /usr/include/c++/9/bits/streambuf_iterator.h \
+  /usr/include/c++/9/bits/string_view.tcc \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/uniform_int_dist.h \
+  /usr/include/c++/9/bits/unique_lock.h \
+  /usr/include/c++/9/bits/unique_ptr.h \
+  /usr/include/c++/9/bits/unordered_map.h \
+  /usr/include/c++/9/bits/unordered_set.h \
+  /usr/include/c++/9/bits/uses_allocator.h \
+  /usr/include/c++/9/bits/vector.tcc \
+  /usr/include/c++/9/cassert \
+  /usr/include/c++/9/cctype \
+  /usr/include/c++/9/cerrno \
+  /usr/include/c++/9/chrono \
+  /usr/include/c++/9/clocale \
+  /usr/include/c++/9/cmath \
+  /usr/include/c++/9/condition_variable \
+  /usr/include/c++/9/cstdint \
+  /usr/include/c++/9/cstdio \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/c++/9/cstring \
+  /usr/include/c++/9/ctime \
+  /usr/include/c++/9/cwchar \
+  /usr/include/c++/9/cwctype \
+  /usr/include/c++/9/debug/assertions.h \
+  /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/deque \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/ext/aligned_buffer.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/ext/atomicity.h \
+  /usr/include/c++/9/ext/concurrence.h \
+  /usr/include/c++/9/ext/new_allocator.h \
+  /usr/include/c++/9/ext/numeric_traits.h \
+  /usr/include/c++/9/ext/string_conversions.h \
+  /usr/include/c++/9/ext/type_traits.h \
+  /usr/include/c++/9/functional \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/ios \
+  /usr/include/c++/9/iosfwd \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/istream \
+  /usr/include/c++/9/iterator \
+  /usr/include/c++/9/limits \
+  /usr/include/c++/9/list \
+  /usr/include/c++/9/map \
+  /usr/include/c++/9/memory \
+  /usr/include/c++/9/mutex \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/numeric \
+  /usr/include/c++/9/optional \
+  /usr/include/c++/9/ostream \
+  /usr/include/c++/9/pstl/execution_defs.h \
+  /usr/include/c++/9/pstl/glue_memory_defs.h \
+  /usr/include/c++/9/pstl/glue_numeric_defs.h \
+  /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/queue \
+  /usr/include/c++/9/random \
+  /usr/include/c++/9/ratio \
+  /usr/include/c++/9/sstream \
+  /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/streambuf \
+  /usr/include/c++/9/string \
+  /usr/include/c++/9/string_view \
+  /usr/include/c++/9/system_error \
+  /usr/include/c++/9/thread \
+  /usr/include/c++/9/tr1/bessel_function.tcc \
+  /usr/include/c++/9/tr1/beta_function.tcc \
+  /usr/include/c++/9/tr1/ell_integral.tcc \
+  /usr/include/c++/9/tr1/exp_integral.tcc \
+  /usr/include/c++/9/tr1/gamma.tcc \
+  /usr/include/c++/9/tr1/hypergeometric.tcc \
+  /usr/include/c++/9/tr1/legendre_function.tcc \
+  /usr/include/c++/9/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/9/tr1/poly_hermite.tcc \
+  /usr/include/c++/9/tr1/poly_laguerre.tcc \
+  /usr/include/c++/9/tr1/riemann_zeta.tcc \
+  /usr/include/c++/9/tr1/special_function_util.h \
+  /usr/include/c++/9/tuple \
+  /usr/include/c++/9/type_traits \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/unordered_map \
+  /usr/include/c++/9/unordered_set \
+  /usr/include/c++/9/utility \
+  /usr/include/c++/9/variant \
+  /usr/include/c++/9/vector \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
+  /usr/include/math.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
+  /usr/local/include/hiredis/alloc.h \
+  /usr/local/include/hiredis/hiredis.h \
+  /usr/local/include/hiredis/read.h \
+  /usr/local/include/hiredis/sds.h \
+  /usr/local/include/sw/redis++/command.h \
+  /usr/local/include/sw/redis++/command_args.h \
+  /usr/local/include/sw/redis++/command_options.h \
+  /usr/local/include/sw/redis++/connection.h \
+  /usr/local/include/sw/redis++/connection_pool.h \
+  /usr/local/include/sw/redis++/cxx_utils.h \
+  /usr/local/include/sw/redis++/errors.h \
+  /usr/local/include/sw/redis++/hiredis_features.h \
+  /usr/local/include/sw/redis++/pipeline.h \
+  /usr/local/include/sw/redis++/queued_redis.h \
+  /usr/local/include/sw/redis++/queued_redis.hpp \
+  /usr/local/include/sw/redis++/redis++.h \
+  /usr/local/include/sw/redis++/redis.h \
+  /usr/local/include/sw/redis++/redis.hpp \
+  /usr/local/include/sw/redis++/redis_cluster.h \
+  /usr/local/include/sw/redis++/redis_cluster.hpp \
+  /usr/local/include/sw/redis++/redis_uri.h \
+  /usr/local/include/sw/redis++/reply.h \
+  /usr/local/include/sw/redis++/sentinel.h \
+  /usr/local/include/sw/redis++/shards.h \
+  /usr/local/include/sw/redis++/shards_pool.h \
+  /usr/local/include/sw/redis++/subscriber.h \
+  /usr/local/include/sw/redis++/tls.h \
+  /usr/local/include/sw/redis++/transaction.h \
+  /usr/local/include/sw/redis++/utils.h
+
+CMakeFiles/GateServer.dir/snowflake.cc.o: /home/lunisolar/cpp/LCServer/GateServer/snowflake.cc \
+  /home/lunisolar/cpp/LCServer/GateServer/singleton.h \
+  /home/lunisolar/cpp/LCServer/GateServer/snowflake.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/c++/9/array \
+  /usr/include/c++/9/backward/auto_ptr.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
+  /usr/include/c++/9/bits/allocated_ptr.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/c++/9/bits/atomic_base.h \
+  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/9/bits/basic_ios.h \
+  /usr/include/c++/9/bits/basic_ios.tcc \
+  /usr/include/c++/9/bits/basic_string.h \
+  /usr/include/c++/9/bits/basic_string.tcc \
+  /usr/include/c++/9/bits/char_traits.h \
+  /usr/include/c++/9/bits/concept_check.h \
+  /usr/include/c++/9/bits/cpp_type_traits.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_defines.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/functexcept.h \
+  /usr/include/c++/9/bits/functional_hash.h \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/invoke.h \
+  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/locale_classes.h \
+  /usr/include/c++/9/bits/locale_classes.tcc \
+  /usr/include/c++/9/bits/locale_facets.h \
+  /usr/include/c++/9/bits/locale_facets.tcc \
+  /usr/include/c++/9/bits/localefwd.h \
+  /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/move.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/bits/ostream.tcc \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/parse_numbers.h \
+  /usr/include/c++/9/bits/postypes.h \
+  /usr/include/c++/9/bits/predefined_ops.h \
+  /usr/include/c++/9/bits/ptr_traits.h \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/refwrap.h \
+  /usr/include/c++/9/bits/shared_ptr.h \
+  /usr/include/c++/9/bits/shared_ptr_atomic.h \
+  /usr/include/c++/9/bits/shared_ptr_base.h \
+  /usr/include/c++/9/bits/std_abs.h \
+  /usr/include/c++/9/bits/std_mutex.h \
+  /usr/include/c++/9/bits/stl_algobase.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/bits/stl_iterator.h \
+  /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/9/bits/stl_relops.h \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/bits/streambuf.tcc \
+  /usr/include/c++/9/bits/streambuf_iterator.h \
+  /usr/include/c++/9/bits/string_view.tcc \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/unique_lock.h \
+  /usr/include/c++/9/bits/unique_ptr.h \
+  /usr/include/c++/9/bits/uses_allocator.h \
+  /usr/include/c++/9/cctype \
+  /usr/include/c++/9/cerrno \
+  /usr/include/c++/9/chrono \
+  /usr/include/c++/9/clocale \
+  /usr/include/c++/9/cstdint \
+  /usr/include/c++/9/cstdio \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/c++/9/ctime \
+  /usr/include/c++/9/cwchar \
+  /usr/include/c++/9/cwctype \
+  /usr/include/c++/9/debug/assertions.h \
+  /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/ext/aligned_buffer.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/ext/atomicity.h \
+  /usr/include/c++/9/ext/concurrence.h \
+  /usr/include/c++/9/ext/new_allocator.h \
+  /usr/include/c++/9/ext/numeric_traits.h \
+  /usr/include/c++/9/ext/string_conversions.h \
+  /usr/include/c++/9/ext/type_traits.h \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/ios \
+  /usr/include/c++/9/iosfwd \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/istream \
+  /usr/include/c++/9/limits \
+  /usr/include/c++/9/memory \
+  /usr/include/c++/9/mutex \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/ostream \
+  /usr/include/c++/9/pstl/execution_defs.h \
+  /usr/include/c++/9/pstl/glue_memory_defs.h \
+  /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/ratio \
+  /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/streambuf \
+  /usr/include/c++/9/string \
+  /usr/include/c++/9/string_view \
+  /usr/include/c++/9/system_error \
+  /usr/include/c++/9/thread \
+  /usr/include/c++/9/tuple \
+  /usr/include/c++/9/type_traits \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/utility \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h
+
+CMakeFiles/GateServer.dir/sqlconnpool.cc.o: /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.cc \
+  /home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/c++/9/array \
+  /usr/include/c++/9/atomic \
+  /usr/include/c++/9/backward/auto_ptr.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
+  /usr/include/c++/9/bits/allocated_ptr.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/c++/9/bits/atomic_base.h \
+  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/9/bits/basic_ios.h \
+  /usr/include/c++/9/bits/basic_ios.tcc \
+  /usr/include/c++/9/bits/basic_string.h \
+  /usr/include/c++/9/bits/basic_string.tcc \
+  /usr/include/c++/9/bits/char_traits.h \
+  /usr/include/c++/9/bits/concept_check.h \
+  /usr/include/c++/9/bits/cpp_type_traits.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/bits/deque.tcc \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_defines.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/functexcept.h \
+  /usr/include/c++/9/bits/functional_hash.h \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/invoke.h \
+  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/locale_classes.h \
+  /usr/include/c++/9/bits/locale_classes.tcc \
+  /usr/include/c++/9/bits/locale_facets.h \
+  /usr/include/c++/9/bits/locale_facets.tcc \
+  /usr/include/c++/9/bits/localefwd.h \
+  /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/move.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/bits/ostream.tcc \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/parse_numbers.h \
+  /usr/include/c++/9/bits/postypes.h \
+  /usr/include/c++/9/bits/predefined_ops.h \
+  /usr/include/c++/9/bits/ptr_traits.h \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/refwrap.h \
+  /usr/include/c++/9/bits/shared_ptr.h \
+  /usr/include/c++/9/bits/shared_ptr_atomic.h \
+  /usr/include/c++/9/bits/shared_ptr_base.h \
+  /usr/include/c++/9/bits/std_abs.h \
+  /usr/include/c++/9/bits/std_mutex.h \
+  /usr/include/c++/9/bits/stl_algobase.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_deque.h \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/bits/stl_heap.h \
+  /usr/include/c++/9/bits/stl_iterator.h \
+  /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_queue.h \
+  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/9/bits/stl_relops.h \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/streambuf.tcc \
+  /usr/include/c++/9/bits/streambuf_iterator.h \
+  /usr/include/c++/9/bits/string_view.tcc \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/unique_lock.h \
+  /usr/include/c++/9/bits/unique_ptr.h \
+  /usr/include/c++/9/bits/uses_allocator.h \
+  /usr/include/c++/9/bits/vector.tcc \
+  /usr/include/c++/9/cctype \
+  /usr/include/c++/9/cerrno \
+  /usr/include/c++/9/chrono \
+  /usr/include/c++/9/clocale \
+  /usr/include/c++/9/condition_variable \
+  /usr/include/c++/9/cstdint \
+  /usr/include/c++/9/cstdio \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/c++/9/ctime \
+  /usr/include/c++/9/cwchar \
+  /usr/include/c++/9/cwctype \
+  /usr/include/c++/9/debug/assertions.h \
+  /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/deque \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/ext/aligned_buffer.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/ext/atomicity.h \
+  /usr/include/c++/9/ext/concurrence.h \
+  /usr/include/c++/9/ext/new_allocator.h \
+  /usr/include/c++/9/ext/numeric_traits.h \
+  /usr/include/c++/9/ext/string_conversions.h \
+  /usr/include/c++/9/ext/type_traits.h \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/ios \
+  /usr/include/c++/9/iosfwd \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/istream \
+  /usr/include/c++/9/limits \
+  /usr/include/c++/9/memory \
+  /usr/include/c++/9/mutex \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/ostream \
+  /usr/include/c++/9/pstl/execution_defs.h \
+  /usr/include/c++/9/pstl/glue_memory_defs.h \
+  /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/queue \
+  /usr/include/c++/9/ratio \
+  /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/stdlib.h \
+  /usr/include/c++/9/streambuf \
+  /usr/include/c++/9/string \
+  /usr/include/c++/9/string_view \
+  /usr/include/c++/9/system_error \
+  /usr/include/c++/9/thread \
+  /usr/include/c++/9/tuple \
+  /usr/include/c++/9/type_traits \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/utility \
+  /usr/include/c++/9/vector \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
+  /usr/include/mysql/client_plugin.h \
+  /usr/include/mysql/errmsg.h \
+  /usr/include/mysql/field_types.h \
+  /usr/include/mysql/my_command.h \
+  /usr/include/mysql/my_compress.h \
+  /usr/include/mysql/my_list.h \
+  /usr/include/mysql/mysql.h \
+  /usr/include/mysql/mysql_com.h \
+  /usr/include/mysql/mysql_time.h \
+  /usr/include/mysql/mysql_version.h \
+  /usr/include/mysql/plugin_auth_common.h \
+  /usr/include/mysql/udf_registration_types.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/time.h \
+  /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h
+
+
+/home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.cc:
+
+/home/lunisolar/cpp/LCServer/GateServer/snowflake.cc:
+
+/home/lunisolar/cpp/LCServer/GateServer/redispool.cc:
 
 /usr/local/include/google/protobuf/wire_format.h:
 
@@ -10270,6 +12832,38 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/grpcpp/impl/client_unary_call.h:
 
 /home/lunisolar/cpp/LCServer/GateServer/main.cc:
+
+/home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.cc:
+
+/usr/include/x86_64-linux-gnu/openssl/opensslconf.h:
+
+/usr/include/openssl/symhacks.h:
+
+/usr/include/openssl/opensslv.h:
+
+/usr/include/openssl/objectserr.h:
+
+/usr/include/openssl/objects.h:
+
+/usr/include/openssl/evperr.h:
+
+/usr/include/openssl/evp.h:
+
+/usr/include/openssl/e_os2.h:
+
+/usr/include/openssl/cryptoerr.h:
+
+/usr/include/openssl/crypto.h:
+
+/usr/include/openssl/bnerr.h:
+
+/usr/include/openssl/bn.h:
+
+/usr/include/openssl/bioerr.h:
+
+/usr/include/openssl/asn1err.h:
+
+/home/lunisolar/cpp/LCServer/GateServer/MysqlDao.cc:
 
 /usr/local/include/grpcpp/version_info.h:
 
@@ -10285,6 +12879,74 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/grpcpp/support/server_callback.h:
 
+/usr/local/include/grpcpp/support/method_handler.h:
+
+/usr/local/include/grpcpp/support/message_allocator.h:
+
+/usr/local/include/grpcpp/support/interceptor.h:
+
+/usr/local/include/grpcpp/support/config.h:
+
+/usr/local/include/grpcpp/support/channel_arguments.h:
+
+/usr/local/include/grpcpp/support/callback_common.h:
+
+/usr/local/include/grpcpp/support/byte_buffer.h:
+
+/usr/local/include/grpcpp/support/async_unary_call.h:
+
+/usr/local/include/grpcpp/support/async_stream.h:
+
+/usr/local/include/grpcpp/server_posix.h:
+
+/usr/local/include/grpcpp/server_interface.h:
+
+/usr/local/include/grpcpp/server_context.h:
+
+/usr/local/include/grpcpp/server_builder.h:
+
+/usr/local/include/grpcpp/server.h:
+
+/usr/local/include/grpcpp/security/tls_credentials_options.h:
+
+/usr/local/include/grpcpp/security/tls_certificate_verifier.h:
+
+/usr/local/include/grpcpp/security/tls_certificate_provider.h:
+
+/usr/local/include/grpcpp/security/credentials.h:
+
+/usr/local/include/grpcpp/security/authorization_policy_provider.h:
+
+/usr/local/include/grpcpp/security/auth_metadata_processor.h:
+
+/usr/local/include/grpcpp/security/auth_context.h:
+
+/usr/local/include/grpcpp/resource_quota.h:
+
+/usr/local/include/grpcpp/impl/server_builder_plugin.h:
+
+/usr/local/include/grpcpp/impl/server_builder_option.h:
+
+/usr/local/include/grpcpp/impl/serialization_traits.h:
+
+/usr/local/include/grpcpp/impl/proto_utils.h:
+
+/usr/local/include/grpcpp/impl/metadata_map.h:
+
+/usr/local/include/grpcpp/impl/completion_queue_tag.h:
+
+/usr/local/include/grpcpp/impl/codegen/time.h:
+
+/usr/local/include/grpcpp/impl/codegen/status.h:
+
+/usr/local/include/grpcpp/impl/codegen/rpc_service_method.h:
+
+/usr/local/include/grpcpp/impl/codegen/metadata_map.h:
+
+/usr/local/include/grpcpp/impl/codegen/interceptor_common.h:
+
+/usr/local/include/grpcpp/impl/codegen/intercepted_channel.h:
+
 /usr/local/include/boost/asio/detail/reactive_socket_recv_op.hpp:
 
 /usr/local/include/boost/system/error_condition.hpp:
@@ -10292,8 +12954,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/system/error_category.hpp:
 
 /usr/local/include/boost/system/detail/error_condition.hpp:
-
-/usr/local/include/boost/system/detail/error_category.hpp:
 
 /usr/local/include/boost/smart_ptr/intrusive_ref_counter.hpp:
 
@@ -10350,6 +13010,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/grpcpp/channel.h:
 
 /usr/local/include/boost/preprocessor/control/expr_iif.hpp:
+
+/usr/local/include/sw/redis++/connection_pool.h:
 
 /usr/include/c++/9/initializer_list:
 
@@ -10466,8 +13128,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
 
 /usr/local/include/boost/mpl/aux_/na_spec.hpp:
-
-/usr/local/include/boost/asio/buffered_stream_fwd.hpp:
 
 /usr/local/include/boost/mpl/aux_/config/pp_counter.hpp:
 
@@ -10593,6 +13253,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/date_time/gregorian/greg_month.hpp:
 
+/usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h:
+
 /usr/local/include/boost/date_time/gregorian/greg_duration_types.hpp:
 
 /usr/local/include/boost/mpl/less.hpp:
@@ -10650,6 +13312,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /home/lunisolar/cpp/LCServer/GateServer/message.grpc.pb.cc:
 
 /usr/local/include/boost/asio/windows/overlapped_handle.hpp:
+
+/usr/local/include/sw/redis++/command_args.h:
 
 /usr/local/include/boost/mpl/aux_/config/has_xxx.hpp:
 
@@ -10729,7 +13393,7 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/date_time/gregorian_calendar.ipp:
 
-/usr/local/include/boost/asio/redirect_error.hpp:
+/home/lunisolar/cpp/LCServer/GateServer/MysqlDao.h:
 
 /usr/local/include/boost/numeric/conversion/udt_builtin_mixture_enum.hpp:
 
@@ -10833,6 +13497,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/beast/http.hpp:
 
+/usr/local/include/grpcpp/impl/sync.h:
+
+/usr/local/include/boost/type_traits/is_copy_assignable.hpp:
+
 /usr/local/include/google/protobuf/port_def.inc:
 
 /usr/local/include/boost/date_time/time_duration.hpp:
@@ -10874,8 +13542,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/mpl/aux_/config/eti.hpp:
 
 /usr/local/include/boost/multi_index/detail/index_base.hpp:
-
-/usr/local/include/boost/asio/traits/static_require_concept.hpp:
 
 /usr/local/include/boost/asio/ip/basic_resolver_iterator.hpp:
 
@@ -11029,6 +13695,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/date_time/date_clock_device.hpp:
 
+/usr/local/include/boost/system/detail/error_category.hpp:
+
+/usr/include/c++/9/bits/random.tcc:
+
 /usr/local/include/boost/asio/disposition.hpp:
 
 /usr/local/include/boost/asio/ip/impl/host_name.ipp:
@@ -11071,15 +13741,17 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/asio/detail/strand_service.hpp:
 
-/usr/local/include/boost/mpl/insert_range_fwd.hpp:
+/usr/include/openssl/sha.h:
 
-/usr/local/include/boost/asio/detail/static_mutex.hpp:
+/usr/local/include/boost/mpl/insert_range_fwd.hpp:
 
 /usr/local/include/boost/preprocessor/logical/limits/bool_256.hpp:
 
 /usr/local/include/boost/beast/core/impl/multi_buffer.hpp:
 
 /usr/local/include/boost/asio/detail/signal_blocker.hpp:
+
+/usr/local/include/sw/redis++/redis++.h:
 
 /usr/local/include/boost/mpl/aux_/arg_typedef.hpp:
 
@@ -11094,8 +13766,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/asio/detail/resolve_op.hpp:
 
 /usr/local/include/boost/type_traits/conditional.hpp:
-
-/usr/local/include/boost/asio/detail/regex_fwd.hpp:
 
 /usr/local/include/boost/asio/impl/execution_context.hpp:
 
@@ -11121,6 +13791,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/mpl/advance_fwd.hpp:
 
+/usr/local/include/grpcpp/impl/codegen/sync.h:
+
+/usr/local/include/boost/asio/detail/reactive_socket_connect_op.hpp:
+
 /usr/local/include/boost/beast/core/detail/tuple.hpp:
 
 /usr/local/include/boost/mpl/aux_/lambda_spec.hpp:
@@ -11138,8 +13812,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/asio/detail/posix_event.hpp:
 
 /usr/local/include/boost/type_traits/remove_reference.hpp:
-
-/usr/local/include/boost/asio/detail/posix_static_mutex.hpp:
 
 /usr/local/include/boost/mpl/value_type_fwd.hpp:
 
@@ -11168,6 +13840,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h:
 
 /usr/include/net/if.h:
+
+/usr/local/include/boost/asio/traits/static_require_concept.hpp:
+
+/usr/include/mysql/mysql_com.h:
 
 /usr/local/include/boost/asio/ip/impl/address_v4.hpp:
 
@@ -11229,8 +13905,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/asio/ip/detail/endpoint.hpp:
 
-/usr/local/include/grpcpp/support/byte_buffer.h:
-
 /usr/include/stdio.h:
 
 /usr/include/wctype.h:
@@ -11274,6 +13948,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/asio/execution/relationship.hpp:
 
 /usr/local/include/boost/asio/detail/handler_work.hpp:
+
+/usr/local/include/grpcpp/support/proto_buffer_reader.h:
+
+/usr/local/include/boost/preprocessor/facilities/check_empty.hpp:
 
 /usr/local/include/boost/beast/http/verb.hpp:
 
@@ -11409,8 +14087,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/absl/strings/internal/cord_internal.h:
 
-/usr/local/include/absl/time/civil_time.h:
-
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/local/include/boost/asio/yield.hpp:
@@ -11420,6 +14096,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/beast/http/field.hpp:
 
 /usr/local/include/boost/core/ignore_unused.hpp:
+
+/usr/local/include/sw/redis++/redis.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
@@ -11468,6 +14146,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/grpcpp/impl/create_auth_context.h:
 
 /usr/local/include/boost/asio/detail/impl/posix_thread.ipp:
+
+/usr/local/include/grpcpp/security/tls_crl_provider.h:
+
+/usr/local/include/boost/type_traits/is_member_pointer.hpp:
 
 /usr/local/include/boost/asio/execution/context_as.hpp:
 
@@ -11530,10 +14212,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
-
-/usr/local/include/absl/strings/internal/str_format/parser.h:
-
-/usr/include/c++/9/bits/atomic_base.h:
 
 /usr/local/include/boost/core/default_allocator.hpp:
 
@@ -11617,8 +14295,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/mpl/set/aux_/insert_impl.hpp:
 
-/usr/local/include/grpcpp/resource_quota.h:
-
 /usr/local/include/boost/asio/detail/signal_handler.hpp:
 
 /usr/local/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
@@ -11643,8 +14319,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/include/c++/9/bits/stl_heap.h:
 
-/usr/include/c++/9/bits/allocator.h:
-
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
 /usr/include/c++/9/ratio:
@@ -11666,10 +14340,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/asio/ip/impl/network_v4.hpp:
 
 /usr/local/include/nlohmann/detail/meta/type_traits.hpp:
-
-/usr/local/include/boost/asio/detail/reactive_socket_connect_op.hpp:
-
-/usr/local/include/grpcpp/impl/codegen/sync.h:
 
 /usr/local/include/boost/asio/cancellation_type.hpp:
 
@@ -11777,8 +14447,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/mpl/aux_/config/has_apply.hpp:
 
-/usr/include/c++/9/algorithm:
-
 /usr/include/c++/9/chrono:
 
 /usr/include/asm-generic/errno.h:
@@ -11855,6 +14523,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/include/c++/9/ext/string_conversions.h:
 
+/usr/local/include/boost/asio/detail/regex_fwd.hpp:
+
+/usr/include/c++/9/queue:
+
 /usr/local/include/boost/asio/detail/call_stack.hpp:
 
 /usr/include/c++/9/any:
@@ -11910,8 +14582,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/preprocessor/facilities/overload.hpp:
 
 /usr/local/include/boost/asio/detail/impl/reactive_socket_service_base.ipp:
-
-/usr/local/include/grpcpp/impl/codegen/time.h:
 
 /home/lunisolar/cpp/LCServer/GateServer/AsioIOServicePool.cc:
 
@@ -11973,6 +14643,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/asio/detail/blocking_executor_op.hpp:
 
+/usr/include/openssl/ossl_typ.h:
+
 /home/lunisolar/cpp/LCServer/GateServer/AsioIOServicePool.h:
 
 /usr/local/include/boost/assert/source_location.hpp:
@@ -11987,8 +14659,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/mpl/vector/aux_/iterator.hpp:
 
-/usr/local/include/grpcpp/security/authorization_policy_provider.h:
-
 /usr/include/c++/9/bits/std_abs.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -12000,10 +14670,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/include/c++/9/cassert:
 
 /usr/include/c++/9/utility:
-
-/usr/local/include/boost/system/detail/cerrno.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
@@ -12043,9 +14709,9 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/mpl/erase_fwd.hpp:
 
-/usr/local/include/boost/smart_ptr/bad_weak_ptr.hpp:
+/usr/include/mysql/udf_registration_types.h:
 
-/usr/local/include/grpcpp/security/auth_metadata_processor.h:
+/usr/local/include/boost/smart_ptr/bad_weak_ptr.hpp:
 
 /usr/local/include/boost/asio/detail/impl/epoll_reactor.ipp:
 
@@ -12054,6 +14720,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/google/protobuf/inlined_string_field.h:
 
 /usr/include/c++/9/bits/allocated_ptr.h:
+
+/usr/include/mysql/field_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
@@ -12083,6 +14751,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/asio/signal_set.hpp:
 
+/usr/local/include/grpcpp/impl/server_callback_handlers.h:
+
+/usr/local/include/boost/asio/basic_waitable_timer.hpp:
+
 /usr/local/include/boost/asio/socket_base.hpp:
 
 /usr/local/include/boost/mpl/O1_size.hpp:
@@ -12102,6 +14774,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/include/c++/9/bits/stl_vector.h:
 
 /usr/include/c++/9/ext/numeric_traits.h:
+
+/usr/include/openssl/randerr.h:
 
 /usr/local/include/boost/asio/detail/socket_holder.hpp:
 
@@ -12169,9 +14843,9 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/mpl/sequence_tag.hpp:
 
-/usr/local/include/grpcpp/server.h:
-
 /usr/include/linux/stat.h:
+
+/usr/local/include/sw/redis++/connection.h:
 
 /usr/include/c++/9/bits/stl_pair.h:
 
@@ -12413,6 +15087,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/type_traits/is_complex.hpp:
 
+/usr/local/include/hiredis/read.h:
+
 /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
 
 /usr/local/include/boost/mpl/vector/aux_/include_preprocessed.hpp:
@@ -12440,8 +15116,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/local/include/boost/date_time/date_duration_types.hpp:
-
-/usr/local/include/grpcpp/impl/codegen/interceptor_common.h:
 
 /usr/include/x86_64-linux-gnu/bits/signal_ext.h:
 
@@ -12471,6 +15145,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/asio/detail/timer_queue_ptime.hpp:
 
+/usr/local/include/sw/redis++/transaction.h:
+
 /usr/local/include/boost/multi_index/sequenced_index_fwd.hpp:
 
 /usr/local/include/boost/asio/detail/buffered_stream_storage.hpp:
@@ -12494,10 +15170,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/include/c++/9/bits/basic_string.h:
 
 /usr/local/include/boost/multi_index_container_fwd.hpp:
-
-/usr/local/include/boost/mpl/lambda_fwd.hpp:
-
-/usr/local/include/boost/asio/detail/impl/scheduler.ipp:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -12546,6 +15218,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/local/include/boost/asio/detail/impl/null_event.ipp:
+
+/usr/local/include/grpcpp/impl/status.h:
+
+/usr/local/include/boost/asio/traits/require_member.hpp:
 
 /usr/local/include/boost/asio/detail/scheduler_operation.hpp:
 
@@ -12609,6 +15285,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
+/usr/include/c++/9/random:
+
 /usr/local/include/boost/type_traits/is_union.hpp:
 
 /usr/local/include/boost/property_tree/id_translator.hpp:
@@ -12626,6 +15304,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/include/x86_64-linux-gnu/sys/uio.h:
 
 /usr/local/include/boost/asio/detail/tss_ptr.hpp:
+
+/usr/local/include/sw/redis++/redis_cluster.hpp:
 
 /usr/local/include/boost/type_traits/detail/has_binary_operator.hpp:
 
@@ -12658,6 +15338,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h:
 
 /usr/local/include/boost/asio/as_tuple.hpp:
+
+/usr/include/openssl/asn1.h:
 
 /usr/local/include/boost/asio/associated_allocator.hpp:
 
@@ -12731,6 +15413,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/type_traits/has_minus_assign.hpp:
 
+/usr/local/include/sw/redis++/tls.h:
+
 /usr/local/include/boost/mp11/detail/config.hpp:
 
 /usr/local/include/boost/type_traits/has_less.hpp:
@@ -12786,6 +15470,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/asio/detail/impl/timer_queue_set.ipp:
 
 /usr/local/include/boost/beast/http/impl/basic_parser.ipp:
+
+/usr/local/include/hiredis/hiredis.h:
 
 /usr/local/include/boost/date_time/compiler_config.hpp:
 
@@ -12917,6 +15603,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/asio/steady_timer.hpp:
 
+/usr/local/include/hiredis/sds.h:
+
 /usr/include/c++/9/thread:
 
 /usr/local/include/absl/base/internal/nullability_impl.h:
@@ -12977,6 +15665,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/include/x86_64-linux-gnu/bits/in.h:
 
+/usr/local/include/sw/redis++/hiredis_features.h:
+
 /usr/local/include/boost/preprocessor/tuple/rem.hpp:
 
 /usr/local/include/boost/asio/detail/non_const_lvalue.hpp:
@@ -12997,6 +15687,12 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/beast/http/empty_body_fwd.hpp:
 
+/usr/local/include/grpcpp/impl/rpc_method.h:
+
+/usr/local/include/boost/system/api_config.hpp:
+
+/usr/local/include/boost/type_traits/is_integral.hpp:
+
 /usr/local/include/boost/type_traits/is_same.hpp:
 
 /usr/local/include/boost/version.hpp:
@@ -13009,8 +15705,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/google/protobuf/util/type_resolver.h:
 
-/usr/local/include/grpcpp/support/config.h:
-
 /home/lunisolar/cpp/LCServer/GateServer/CServer.h:
 
 /usr/local/include/boost/date_time/posix_time/ptime.hpp:
@@ -13021,9 +15715,31 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/beast/core/detail/ostream.hpp:
 
+/usr/include/c++/9/bits/allocator.h:
+
+/home/lunisolar/cpp/LCServer/GateServer/MysqlMgr.h:
+
+/usr/local/include/boost/container_hash/hash.hpp:
+
+/usr/local/include/boost/type_traits/add_lvalue_reference.hpp:
+
+/usr/local/include/boost/asio/detail/impl/buffer_sequence_adapter.ipp:
+
+/usr/local/include/boost/preprocessor/control/expr_if.hpp:
+
 /home/lunisolar/cpp/LCServer/GateServer/const.h:
 
+/home/lunisolar/cpp/LCServer/GateServer/redispool.h:
+
+/home/lunisolar/cpp/LCServer/GateServer/sqlconnpool.h:
+
 /usr/include/c++/9/bits/codecvt.h:
+
+/usr/local/include/boost/static_assert.hpp:
+
+/usr/local/include/boost/asio/detail/reactive_socket_accept_op.hpp:
+
+/usr/include/c++/9/bits/deque.tcc:
 
 /usr/local/include/boost/asio/ip/impl/address_v6.hpp:
 
@@ -13045,6 +15761,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/include/c++/9/bits/indirect_array.h:
 
+/usr/include/c++/9/bits/list.tcc:
+
 /usr/local/include/boost/asio/traits/execute_member.hpp:
 
 /usr/include/c++/9/bits/locale_conv.h:
@@ -13063,9 +15781,25 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/include/c++/9/bits/quoted_string.h:
 
+/usr/local/include/grpcpp/support/proto_buffer_writer.h:
+
+/usr/include/c++/9/bits/random.h:
+
+/usr/local/include/boost/mpl/iterator_tags.hpp:
+
 /usr/include/c++/9/bits/slice_array.h:
 
 /usr/local/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/ioctl.h:
+
+/usr/include/c++/9/bits/stl_deque.h:
+
+/usr/local/include/boost/preprocessor/variadic/size.hpp:
+
+/usr/local/include/absl/base/optimization.h:
+
+/usr/include/c++/9/bits/stl_list.h:
 
 /usr/local/include/boost/date_time/int_adapter.hpp:
 
@@ -13080,6 +15814,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/include/c++/9/bits/stl_numeric.h:
 
 /home/lunisolar/cpp/LCServer/GateServer/message.pb.h:
+
+/usr/include/c++/9/bits/unordered_set.h:
 
 /usr/include/c++/9/bits/valarray_array.tcc:
 
@@ -13099,13 +15835,51 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/include/c++/9/codecvt:
 
+/usr/include/c++/9/deque:
+
+/usr/local/include/grpcpp/impl/channel_interface.h:
+
 /usr/include/c++/9/map:
 
+/usr/include/c++/9/stdlib.h:
+
 /usr/include/c++/9/valarray:
+
+/usr/include/mysql/errmsg.h:
+
+/usr/include/mysql/my_command.h:
+
+/usr/include/mysql/my_compress.h:
+
+/usr/local/include/boost/preprocessor/facilities/intercept.hpp:
+
+/usr/local/include/grpcpp/impl/codegen/config_protobuf.h:
+
+/usr/include/mysql/my_list.h:
+
+/usr/local/include/boost/type_traits/add_pointer.hpp:
+
+/usr/include/mysql/mysql.h:
+
+/usr/include/mysql/mysql_time.h:
+
+/usr/local/include/boost/asio/redirect_error.hpp:
+
+/usr/include/mysql/mysql_version.h:
+
+/usr/local/include/boost/mp11/detail/mp_fold.hpp:
+
+/usr/local/include/boost/asio/detail/posix_static_mutex.hpp:
+
+/usr/include/mysql/plugin_auth_common.h:
+
+/usr/local/include/absl/numeric/bits.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h:
 
 /usr/local/include/boost/mpl/clear_fwd.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h:
 
 /usr/local/include/boost/asio/unyield.hpp:
 
@@ -13161,6 +15935,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/beast/core/buffers_to_string.hpp:
 
+/usr/include/openssl/safestack.h:
+
 /usr/include/c++/9/debug/assertions.h:
 
 /usr/local/include/boost/mpl/aux_/template_arity.hpp:
@@ -13193,11 +15969,19 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/beast/core/detail/buffers_range_adaptor.hpp:
 
+/usr/include/openssl/obj_mac.h:
+
 /usr/local/include/boost/mpl/set/aux_/begin_end_impl.hpp:
 
 /usr/local/include/boost/beast/core/detail/clamp.hpp:
 
 /usr/local/include/absl/base/internal/dynamic_annotations.h:
+
+/usr/local/include/boost/property_tree/detail/ptree_implementation.hpp:
+
+/usr/local/include/boost/beast/core/detail/flat_stream.hpp:
+
+/usr/include/openssl/stack.h:
 
 /usr/local/include/boost/beast/core/detail/remap_post_to_defer.hpp:
 
@@ -13263,6 +16047,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/nlohmann/detail/iterators/json_reverse_iterator.hpp:
 
+/usr/local/include/sw/redis++/shards.h:
+
 /usr/local/include/boost/beast/core/impl/buffers_suffix.hpp:
 
 /usr/local/include/boost/beast/core/impl/error.hpp:
@@ -13276,6 +16062,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector10.hpp:
 
 /usr/local/include/boost/beast/core/impl/file_stdio.ipp:
+
+/usr/include/c++/9/algorithm:
+
+/usr/local/include/sw/redis++/command_options.h:
 
 /usr/local/include/boost/beast/core/impl/flat_buffer.hpp:
 
@@ -13351,6 +16141,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/beast/http/basic_parser.hpp:
 
+/usr/local/include/hiredis/alloc.h:
+
 /usr/local/include/boost/optional/detail/optional_swap.hpp:
 
 /usr/local/include/boost/beast/http/buffer_body.hpp:
@@ -13373,17 +16165,9 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/mpl/assert.hpp:
 
-/usr/local/include/grpcpp/support/channel_arguments.h:
-
 /usr/local/include/boost/asio/impl/detached.hpp:
 
 /usr/local/include/boost/beast/http/detail/rfc7230.ipp:
-
-/usr/include/c++/9/bits/istream.tcc:
-
-/usr/local/include/boost/beast/core/impl/flat_stream.hpp:
-
-/usr/local/include/boost/beast/http/dynamic_body.hpp:
 
 /usr/local/include/boost/beast/http/dynamic_body_fwd.hpp:
 
@@ -13483,25 +16267,17 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/container_hash/detail/hash_range.hpp:
 
-/usr/local/include/boost/type_traits/is_copy_assignable.hpp:
-
-/usr/local/include/grpcpp/impl/sync.h:
-
 /usr/local/include/boost/container_hash/detail/hash_tuple_like.hpp:
+
+/usr/local/include/absl/time/civil_time.h:
+
+/usr/local/include/sw/redis++/shards_pool.h:
 
 /usr/local/include/boost/beast/http/impl/rfc7230.hpp:
 
 /usr/local/include/boost/mpl/sequence_tag_fwd.hpp:
 
 /usr/local/include/boost/multi_index/detail/unbounded.hpp:
-
-/usr/local/include/boost/container_hash/hash.hpp:
-
-/usr/local/include/boost/type_traits/add_lvalue_reference.hpp:
-
-/usr/local/include/boost/asio/detail/impl/buffer_sequence_adapter.ipp:
-
-/usr/local/include/boost/preprocessor/control/expr_if.hpp:
 
 /usr/local/include/boost/beast/core/detail/allocator.hpp:
 
@@ -13623,6 +16399,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/asio/basic_socket_streambuf.hpp:
 
+/usr/local/include/sw/redis++/sentinel.h:
+
 /usr/local/include/boost/intrusive/pack_options.hpp:
 
 /usr/local/include/boost/mpl/aux_/config/forwarding.hpp:
@@ -13688,12 +16466,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/local/include/boost/mpl/always.hpp:
-
-/usr/local/include/boost/mp11/detail/mp_fold.hpp:
-
-/usr/local/include/boost/beast/core/detail/flat_stream.hpp:
-
-/usr/local/include/boost/property_tree/detail/ptree_implementation.hpp:
 
 /usr/include/c++/9/ext/alloc_traits.h:
 
@@ -13769,7 +16541,19 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/smart_ptr/enable_shared_from_this.hpp:
 
+/usr/local/include/grpcpp/impl/interceptor_common.h:
+
+/usr/local/include/boost/intrusive/detail/reverse_iterator.hpp:
+
+/usr/local/include/boost/asio/impl/system_context.hpp:
+
+/usr/local/include/boost/smart_ptr/make_shared.hpp:
+
 /usr/local/include/boost/smart_ptr/make_shared_array.hpp:
+
+/usr/local/include/grpcpp/impl/rpc_service_method.h:
+
+/usr/local/include/boost/smart_ptr/make_shared_object.hpp:
 
 /usr/local/include/boost/static_string/config.hpp:
 
@@ -13778,8 +16562,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp:
 
 /usr/local/include/boost/type_traits/add_cv.hpp:
-
-/usr/local/include/boost/type_traits/add_pointer.hpp:
 
 /usr/local/include/boost/type_traits/add_reference.hpp:
 
@@ -13833,8 +16615,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/type_traits/enable_if.hpp:
 
-/usr/local/include/grpcpp/server_context.h:
-
 /usr/local/include/boost/date_time/gregorian/greg_day_of_year.hpp:
 
 /usr/local/include/boost/make_unique.hpp:
@@ -13856,6 +16636,10 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/type_traits/has_bit_or.hpp:
 
 /usr/local/include/absl/crc/internal/crc_cord_state.h:
+
+/usr/local/include/boost/multi_index/detail/ord_index_impl.hpp:
+
+/usr/local/include/boost/type_traits/has_bit_or_assign.hpp:
 
 /usr/local/include/boost/type_traits/has_complement.hpp:
 
@@ -13915,15 +16699,15 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/type_traits/has_trivial_destructor.hpp:
 
+/usr/local/include/boost/type_traits/is_empty.hpp:
+
+/usr/local/include/boost/filesystem/detail/type_traits/disjunction.hpp:
+
 /usr/local/include/boost/type_traits/has_trivial_move_constructor.hpp:
 
 /usr/include/c++/9/bits/fstream.tcc:
 
 /usr/local/include/boost/type_traits/has_unary_plus.hpp:
-
-/usr/include/c++/9/bits/stl_construct.h:
-
-/usr/local/include/grpcpp/impl/codegen/create_auth_context.h:
 
 /usr/local/include/boost/type_traits/is_abstract.hpp:
 
@@ -13942,12 +16726,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/intrusive/detail/uncast.hpp:
 
 /usr/local/include/boost/type_traits/is_default_constructible.hpp:
-
-/usr/local/include/boost/filesystem/detail/type_traits/disjunction.hpp:
-
-/usr/local/include/boost/type_traits/is_empty.hpp:
-
-/usr/include/c++/9/unordered_set:
 
 /usr/local/include/boost/type_traits/is_swappable.hpp:
 
@@ -13975,11 +16753,9 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/type_traits/is_nothrow_move_assignable.hpp:
 
+/usr/include/mysql/client_plugin.h:
+
 /usr/local/include/boost/type_traits/is_nothrow_move_constructible.hpp:
-
-/usr/local/include/boost/smart_ptr/make_shared_object.hpp:
-
-/usr/local/include/grpcpp/impl/rpc_service_method.h:
 
 /usr/local/include/boost/type_traits/is_nothrow_swappable.hpp:
 
@@ -14011,6 +16787,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/io_fwd.hpp:
 
+/usr/include/openssl/rand.h:
+
 /usr/local/include/boost/mpl/contains_fwd.hpp:
 
 /usr/local/include/boost/mpl/vector/aux_/front.hpp:
@@ -14029,7 +16807,15 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/type_traits/remove_all_extents.hpp:
 
+/usr/local/include/grpcpp/impl/codegen/create_auth_context.h:
+
+/usr/include/c++/9/bits/stl_construct.h:
+
+/usr/local/include/sw/redis++/command.h:
+
 /usr/local/include/boost/type_traits/remove_cv_ref.hpp:
+
+/usr/local/include/sw/redis++/reply.h:
 
 /usr/local/include/boost/type_traits/remove_extent.hpp:
 
@@ -14113,9 +16899,55 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/nlohmann/json.hpp:
 
-/home/lunisolar/cpp/LCServer/GateServer/ConfigMgr.cc:
+/usr/local/include/boost/system/detail/cerrno.hpp:
 
-/usr/local/include/grpcpp/support/proto_buffer_writer.h:
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+/usr/local/include/sw/redis++/cxx_utils.h:
+
+/usr/local/include/sw/redis++/errors.h:
+
+/usr/include/c++/9/list:
+
+/usr/local/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:
+
+/usr/local/include/boost/asio/buffered_stream_fwd.hpp:
+
+/usr/local/include/sw/redis++/pipeline.h:
+
+/usr/local/include/absl/strings/internal/str_format/parser.h:
+
+/usr/include/c++/9/bits/atomic_base.h:
+
+/usr/local/include/sw/redis++/queued_redis.h:
+
+/usr/include/c++/9/bits/istream.tcc:
+
+/usr/local/include/boost/beast/core/impl/flat_stream.hpp:
+
+/usr/local/include/boost/beast/http/dynamic_body.hpp:
+
+/usr/local/include/sw/redis++/queued_redis.hpp:
+
+/usr/local/include/sw/redis++/redis.hpp:
+
+/usr/local/include/boost/asio/detail/static_mutex.hpp:
+
+/usr/local/include/sw/redis++/redis_cluster.h:
+
+/usr/include/c++/9/unordered_set:
+
+/usr/local/include/sw/redis++/redis_uri.h:
+
+/usr/local/include/boost/mpl/lambda_fwd.hpp:
+
+/usr/local/include/boost/asio/detail/impl/scheduler.ipp:
+
+/usr/local/include/sw/redis++/subscriber.h:
+
+/usr/local/include/sw/redis++/utils.h:
+
+/home/lunisolar/cpp/LCServer/GateServer/ConfigMgr.cc:
 
 /usr/local/include/google/protobuf/reflection_ops.h:
 
@@ -14146,6 +16978,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/bind/mem_fn.hpp:
 
 /usr/local/include/boost/bind/placeholders.hpp:
+
+/usr/include/c++/9/bits/stl_queue.h:
 
 /usr/local/include/boost/config/abi_prefix.hpp:
 
@@ -14221,8 +17055,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/iterator/enable_if_convertible.hpp:
 
-/usr/local/include/grpcpp/security/tls_certificate_verifier.h:
-
 /usr/local/include/boost/iterator/is_iterator.hpp:
 
 /usr/local/include/boost/iterator/iterator_adaptor.hpp:
@@ -14258,6 +17090,12 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/grpc/support/atm_gcc_atomic.h:
 
 /usr/local/include/boost/mpl/arg_fwd.hpp:
+
+/usr/local/include/boost/asio/impl/io_context.ipp:
+
+/usr/local/include/absl/container/inlined_vector.h:
+
+/usr/local/include/boost/mpl/minus.hpp:
 
 /usr/local/include/boost/mpl/at_fwd.hpp:
 
@@ -14327,8 +17165,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp:
 
-/usr/local/include/grpcpp/impl/serialization_traits.h:
-
 /usr/local/include/boost/multi_index/detail/base_type.hpp:
 
 /usr/local/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp:
@@ -14392,8 +17228,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/mpl/iter_fold.hpp:
 
 /usr/local/include/boost/mpl/iterator_range.hpp:
-
-/usr/local/include/boost/mpl/iterator_tags.hpp:
 
 /usr/local/include/boost/asio/strand.hpp:
 
@@ -14493,9 +17327,9 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/multi_index/detail/bad_archive_exception.hpp:
 
-/usr/include/c++/9/bits/specfun.h:
-
 /usr/local/include/grpcpp/security/server_credentials.h:
+
+/usr/include/c++/9/bits/specfun.h:
 
 /usr/local/include/boost/multi_index/detail/bidir_node_iterator.hpp:
 
@@ -14519,17 +17353,17 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/multi_index/detail/invalidate_iterators.hpp:
 
+/usr/include/openssl/bio.h:
+
+/usr/local/include/grpcpp/impl/grpc_library.h:
+
+/usr/local/include/boost/multi_index/detail/modify_key_adaptor.hpp:
+
 /usr/local/include/boost/type_traits/is_trivially_copyable.hpp:
 
 /usr/local/include/boost/multi_index/detail/node_handle.hpp:
 
 /usr/local/include/boost/multi_index/detail/node_type.hpp:
-
-/usr/local/include/boost/type_traits/has_bit_or_assign.hpp:
-
-/usr/local/include/boost/multi_index/detail/ord_index_impl.hpp:
-
-/usr/include/c++/9/bits/unordered_set.h:
 
 /usr/local/include/boost/multi_index/detail/raw_ptr.hpp:
 
@@ -14561,10 +17395,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/google/protobuf/map_type_handler.h:
 
-/usr/local/include/boost/preprocessor/facilities/intercept.hpp:
-
-/usr/local/include/grpcpp/impl/codegen/config_protobuf.h:
-
 /usr/local/include/boost/asio/detail/thread_group.hpp:
 
 /usr/local/include/boost/preprocessor/facilities/limits/intercept_256.hpp:
@@ -14575,11 +17405,7 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/boost/property_tree/exceptions.hpp:
 
-/usr/local/include/grpcpp/impl/metadata_map.h:
-
 /usr/local/include/boost/property_tree/ptree.hpp:
-
-/usr/local/include/grpcpp/server_posix.h:
 
 /usr/local/include/boost/asio/io_context.hpp:
 
@@ -14605,35 +17431,9 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/include/byteswap.h:
 
-/usr/local/include/boost/static_assert.hpp:
-
-/usr/local/include/boost/asio/detail/reactive_socket_accept_op.hpp:
-
-/usr/include/c++/9/bits/deque.tcc:
-
-/usr/include/c++/9/bits/list.tcc:
-
-/usr/include/x86_64-linux-gnu/sys/ioctl.h:
-
-/usr/include/c++/9/bits/stl_deque.h:
-
-/usr/local/include/boost/preprocessor/variadic/size.hpp:
-
-/usr/local/include/absl/base/optimization.h:
-
-/usr/include/c++/9/bits/stl_list.h:
-
 /usr/include/c++/9/bits/stl_multiset.h:
 
 /usr/include/c++/9/bits/stl_set.h:
-
-/usr/include/c++/9/deque:
-
-/usr/local/include/grpcpp/impl/channel_interface.h:
-
-/usr/local/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:
-
-/usr/include/c++/9/list:
 
 /usr/include/c++/9/set:
 
@@ -14641,11 +17441,7 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/grpc/slice_buffer.h:
 
-/usr/include/c++/9/stdlib.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h:
 
@@ -14662,8 +17458,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/type_traits/has_bit_xor.hpp:
 
 /usr/local/include/absl/base/casts.h:
-
-/usr/local/include/grpcpp/impl/server_builder_plugin.h:
 
 /usr/local/include/absl/base/config.h:
 
@@ -14687,12 +17481,6 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/absl/container/fixed_array.h:
 
-/usr/local/include/boost/asio/impl/io_context.ipp:
-
-/usr/local/include/boost/mpl/minus.hpp:
-
-/usr/local/include/absl/container/inlined_vector.h:
-
 /usr/local/include/absl/container/internal/btree.h:
 
 /usr/local/include/absl/container/internal/common_policy_traits.h:
@@ -14712,6 +17500,8 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/boost/config/abi_suffix.hpp:
 
 /usr/local/include/absl/functional/any_invocable.h:
+
+/home/lunisolar/cpp/LCServer/GateServer/snowflake.h:
 
 /usr/local/include/absl/functional/function_ref.h:
 
@@ -14751,17 +17541,7 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 
 /usr/local/include/absl/meta/type_traits.h:
 
-/usr/local/include/absl/numeric/bits.h:
-
 /usr/local/include/absl/numeric/int128.h:
-
-/usr/local/include/boost/intrusive/detail/reverse_iterator.hpp:
-
-/usr/local/include/boost/asio/impl/system_context.hpp:
-
-/usr/local/include/boost/smart_ptr/make_shared.hpp:
-
-/usr/local/include/grpcpp/impl/interceptor_common.h:
 
 /usr/local/include/absl/numeric/int128_have_intrinsic.inc:
 
@@ -14948,67 +17728,3 @@ CMakeFiles/GateServer.dir/message.pb.cc.o: /home/lunisolar/cpp/LCServer/GateServ
 /usr/local/include/grpcpp/grpcpp.h:
 
 /usr/local/include/grpcpp/impl/call_op_set_interface.h:
-
-/usr/local/include/grpcpp/impl/codegen/intercepted_channel.h:
-
-/usr/local/include/grpcpp/impl/codegen/metadata_map.h:
-
-/usr/local/include/grpcpp/impl/codegen/rpc_service_method.h:
-
-/usr/local/include/grpcpp/impl/codegen/status.h:
-
-/usr/local/include/grpcpp/impl/completion_queue_tag.h:
-
-/usr/local/include/boost/multi_index/detail/modify_key_adaptor.hpp:
-
-/usr/local/include/grpcpp/impl/grpc_library.h:
-
-/usr/local/include/grpcpp/impl/proto_utils.h:
-
-/usr/local/include/boost/system/api_config.hpp:
-
-/usr/local/include/boost/type_traits/is_integral.hpp:
-
-/usr/local/include/grpcpp/impl/rpc_method.h:
-
-/usr/local/include/grpcpp/impl/server_builder_option.h:
-
-/usr/local/include/boost/asio/basic_waitable_timer.hpp:
-
-/usr/local/include/grpcpp/impl/server_callback_handlers.h:
-
-/usr/local/include/boost/asio/traits/require_member.hpp:
-
-/usr/local/include/grpcpp/impl/status.h:
-
-/usr/local/include/grpcpp/security/auth_context.h:
-
-/usr/local/include/grpcpp/security/credentials.h:
-
-/usr/local/include/grpcpp/security/tls_certificate_provider.h:
-
-/usr/local/include/grpcpp/security/tls_credentials_options.h:
-
-/usr/local/include/boost/type_traits/is_member_pointer.hpp:
-
-/usr/local/include/grpcpp/security/tls_crl_provider.h:
-
-/usr/local/include/grpcpp/server_builder.h:
-
-/usr/local/include/grpcpp/server_interface.h:
-
-/usr/local/include/grpcpp/support/async_stream.h:
-
-/usr/local/include/grpcpp/support/async_unary_call.h:
-
-/usr/local/include/grpcpp/support/callback_common.h:
-
-/usr/local/include/grpcpp/support/interceptor.h:
-
-/usr/local/include/grpcpp/support/message_allocator.h:
-
-/usr/local/include/grpcpp/support/method_handler.h:
-
-/usr/local/include/boost/preprocessor/facilities/check_empty.hpp:
-
-/usr/local/include/grpcpp/support/proto_buffer_reader.h:
